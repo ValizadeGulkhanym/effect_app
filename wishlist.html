@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+   <!--font awesome-->
+   <link
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+ />
+  <!--Swiper Slider-->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap CSS  -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+</head>
+
+
+
+<body>
+  <!-- Modal Search Starts-->
+  <div id="id01" class="w3-modal effect_page_main_input">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <form action="" method="">
+          <input type="text" placeholder="Effekt axtar..." />
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Search Ends -->
+
+  <!-- Modal basket-->
+  <div class="modal basket_modal" id="exampleModalLong" tabindex="-1" role="dialog"
+    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog " role="document">
+      <div class="modal-content">
+        <div class="modal-header1">
+          <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="basket-modal-body scrollbar">
+          <div class="basket_modal_card ">
+            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <div class="basket_card_desc">
+              <div class="basket_card_title">
+                <a href="">NO FILTER LIGHTROOM PRESETS</a>
+              </div>
+              <div class="cart__variant-meta">Mobile</div>
+            </div>
+            <div class="basket_card_X_and_price_box">
+              <div class="delete_preset">&times;</div>
+              <div class="preset_price">$15</div>
+            </div>
+          </div>
+          <div class="basket_modal_card">
+            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <div class="basket_card_desc">
+              <div class="basket_card_title">
+                <a href="">NO FILTER LIGHTROOM PRESETS</a>
+              </div>
+              <div class="cart__variant-meta">Mobile</div>
+            </div>
+            <div class="basket_card_X_and_price_box">
+              <div class="delete_preset">&times;</div>
+              <div class="preset_price">$15</div>
+            </div>
+          </div>
+          <div class="basket_modal_card">
+            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <div class="basket_card_desc">
+              <div class="basket_card_title">
+                <a href="">NO FILTER LIGHTROOM PRESETS</a>
+              </div>
+              <div class="cart__variant-meta">Mobile</div>
+            </div>
+            <div class="basket_card_X_and_price_box">
+              <div class="delete_preset">&times;</div>
+              <div class="preset_price">$15</div>
+            </div>
+          </div>
+          <div class="basket_modal_card">
+            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <div class="basket_card_desc">
+              <div class="basket_card_title">
+                <a href="">NO FILTER LIGHTROOM PRESETS</a>
+              </div>
+              <div class="cart__variant-meta">Mobile</div>
+            </div>
+            <div class="basket_card_X_and_price_box">
+              <div class="delete_preset">&times;</div>
+              <div class="preset_price">$15</div>
+            </div>
+          </div>
+          <div class="basket_modal_card">
+            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <div class="basket_card_desc">
+              <div class="basket_card_title">
+                <a href="">NO FILTER LIGHTROOM PRESETS</a>
+              </div>
+              <div class="cart__variant-meta">Mobile</div>
+            </div>
+            <div class="basket_card_X_and_price_box">
+              <div class="delete_preset">x</div>
+              <div class="preset_price">$15</div>
+            </div>
+          </div>
+        </div>
+        <div class="basket-modal-footer">
+          <div class="subtotal_and_price_wrapper">
+            <div class="subtotal">subtotal</div>
+            <div class="total_price">$150</div>
+          </div>
+          <button type="button" class="basket_checkout_btn">check out</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--modal end-->
+
+  <!-- Modal Search-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="effect_page_main_input">
+            <input class="" type="text" placeholder="Effekt axtar..." />
+            <div class="search_svg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+              </svg>
+            </div>
+            <div class="exit_svg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Search -->
+
+
+  <!-- HEADER STARTS -->
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
+      </div>
+    </div>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+    <div class="container">
+      <div class="row align-items-center position-relative navbar-effect-header">
+        <div class="col-lg-2 header-logo">
+          <div class="site-logo">
+            <a href="./index.html">
+              <img src="https://123presets.store/cdn/shop/files/image_45_2_170x.png?v=1623531317" alt="" />
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-8 header-middle">
+          <nav class="site-navigation text-center ml-auto " role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+              <li class="has-children">
+                <a href="#" class="nav-link"> LIGHTROOM PRESETS </a>
+                <i class="fa fa-chevron-down"></i>
+                <ul class="dropdown arrow-top">
+                  <li><a href="" class="nav-link">BEST-SELLING PRESENTS</a></li>
+                  <li><a href="" class="nav-link">HOLIDAY COLLECTION</a></li>
+                  <li><a href="" class="nav-link">NEW RELEASES</a></li>
+
+                  <li class="has-children">
+                    <a href="#"> PRESETS BY SEASON </a>
+                    <i class="fa fa-chevron-down"></i>
+                    <ul class="dropdown">
+                      <li><a href="#">MENU ONE</a></li>
+                      <li><a href="#">MENU TWO</a></li>
+                      <li><a href="#">MENU THREE</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#"> PRESETS BY TONE</a>
+                    <i class="fa fa-chevron-down"></i>
+                    <ul class="dropdown">
+                      <li><a href="#">MENU ONE</a></li>
+                      <li><a href="#">MENU TWO</a></li>
+                      <li><a href="#">MENU THREE</a></li>
+                    </ul>
+                  </li>
+                  <li class="has-children">
+                    <a href="#"> PRESETS BY LIFESTYLE</a>
+                    <i class="fa fa-chevron-down"></i>
+                    <ul class="dropdown">
+                      <li><a href="#">MENU ONE</a></li>
+                      <li><a href="#">MENU TWO</a></li>
+                      <li><a href="#">MENU THREE</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="#services-section" class="nav-link">
+                  Video luts </a></li>
+
+
+              <li class="has-children">
+                <a href="" class="nav-link">
+                  123CASE </a>
+                <i class="fa fa-chevron-down"></i>
+                <ul class="dropdown arrow-top">
+                  <li><a href="" class="nav-link">Team</a></li>
+                  <li><a href="" class="nav-link">Pricing</a></li>
+                  <li><a href="" class="nav-link">FAQ</a></li>
+                  <li class="has-children">
+                    <a href="#">More Links</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Menu One</a></li>
+                      <li><a href="#">Menu Two</a></li>
+                      <li><a href="#">Menu Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li><a href="" class="nav-link">F.A.Q</a></li>
+
+              <li><a href="" class="nav-link">Brand</a></li>
+            </ul>
+          </nav>
+
+        </div>
+        <div class="col-lg-2 header-right">
+          <div class="effect_header_right">
+            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
+                class="site-menu-toggle js-menu-toggle text-black"><span class="fa fa-bars h3"></span></a>
+            </div>
+
+            <div class="effect_header_icon">
+              <a href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <div class="effect_header_icon">
+              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="effect_header_icon">
+              <button type="button" class="btn fav_btn position-relative">
+                <a href="./wishlist.html">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z">
+                    </path>
+                  </svg>
+                  <span class="position-absolute text-light translate-middle p-2 border border-light rounded-circle">5
+                  </span>
+                </a>
+
+              </button>
+            </div>
+            <div class="effect_header_icon">
+              <!-- Button trigger modal -->
+              <button type="button" class="basket_modal_btn relative" data-toggle="modal"
+                data-target="#exampleModalLong">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
+                  </path>
+                </svg>
+                <span class="position-absolute translate-middle text-light border rounded-circle">3
+                </span>
+              </button>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <!-- HEADER ENDS -->
+
+
+<section>
+    <div class="wishlist_main_head">
+        <div class="wishlist_main_head_h2">
+        <h2>wishlist</h2>
+    </div>
+<div class="wishlist_main_head_p">
+       <p>To save your wishlist please <a href="">login</a>  or <a href="">sign up</a> .</p> 
+    </div>
+      </div>
+
+<div class="wishlist_cards">
+    <div class="home_effectcard">
+        <div class="home_effectcard_img_and_icon_wrapper">
+          <a href="/videodetails.html">
+            <img
+              src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880"
+              alt=""
+          /></a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          
+       
+        </div>
+
+        <div class="effectcarddescription">
+          <a href="/videodetails.html">
+            <p>BRIGHT & AIRY LIGHTROOM PRESETS</p></a
+          >
+          <select name="" id="">
+            <option value="mobile">mobile</option>
+            <option value="desktop">desktop</option>
+            <option value="mobile and desktop">mobile and desktop</option>
+          </select>
+
+          <div class="price_and_bag_wrapper">
+            <div class="wk-product-price">
+              <span class="wk-product-price--current">$15.00</span>
+              <span class="wk-product-price--compare">$40.00</span>
+            </div>
+            <div class="addtobasketbtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+      <div class="home_effectcard">
+        <div class="home_effectcard_img_and_icon_wrapper">
+          <a href="/videodetails.html">
+            <img
+              src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880"
+              alt=""
+          /></a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          
+       
+        </div>
+
+        <div class="effectcarddescription">
+          <a href="/videodetails.html">
+            <p>BRIGHT & AIRY LIGHTROOM PRESETS</p></a
+          >
+          <select name="" id="">
+            <option value="mobile">mobile</option>
+            <option value="desktop">desktop</option>
+            <option value="mobile and desktop">mobile and desktop</option>
+          </select>
+
+          <div class="price_and_bag_wrapper">
+            <div class="wk-product-price">
+              <span class="wk-product-price--current">$15.00</span>
+              <span class="wk-product-price--compare">$40.00</span>
+            </div>
+            <div class="addtobasketbtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+      <div class="home_effectcard">
+        <div class="home_effectcard_img_and_icon_wrapper">
+          <a href="/videodetails.html">
+            <img
+              src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880"
+              alt=""
+          /></a>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+          
+       
+        </div>
+
+        <div class="effectcarddescription">
+          <a href="/videodetails.html">
+            <p>BRIGHT & AIRY LIGHTROOM PRESETS</p></a
+          >
+          <select name="" id="">
+            <option value="mobile">mobile</option>
+            <option value="desktop">desktop</option>
+            <option value="mobile and desktop">mobile and desktop</option>
+          </select>
+
+          <div class="price_and_bag_wrapper">
+            <div class="wk-product-price">
+              <span class="wk-product-price--current">$15.00</span>
+              <span class="wk-product-price--compare">$40.00</span>
+            </div>
+            <div class="addtobasketbtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+      <div id="" class="home_effectcard">
+        <div class="home_effectcard_img_and_icon_wrapper">
+          <a href="/videodetails.html">
+            <img
+              src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880"
+              alt=""
+          /></a>
+  <button onclick="deleteCard(this)"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>               
+       
+        </div>
+
+        <div class="effectcarddescription">
+          <a href="/videodetails.html">
+            <p>BRIGHT & AIRY LIGHTROOM PRESETS</p></a
+          >
+          <select  class="wishlist_select">
+            <option >mobile</option>
+            <option >desktop</option>
+            <option >mobile and desktop</option>
+          </select>
+
+          <div class="price_and_bag_wrapper">
+            <div class="wk-product-price">
+              <span class="wk-product-price--current">$15.00</span>
+              <span class="wk-product-price--compare">$40.00</span>
+            </div>
+            <div class="addtobasketbtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                  />
+                </svg>
+              </div>
+         
+          </div>
+        </div>
+      </div>
+    </div>
+
+</section>
+
+ <footer>
+      <div class="footermobile">
+        <div class="footerlogo">
+          <img src="images/logo.png" alt="logo" />
+        </div>
+        <div class="footer__social">
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://www.facebook.com/123PRESETS/"
+            title="123PRESETS on Facebook"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-facebook"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M18.56 31.36V17.28h4.48l.64-5.12h-5.12v-3.2c0-1.28.64-2.56 2.56-2.56h2.56V1.28H19.2c-3.84 0-7.04 2.56-7.04 7.04v3.84H7.68v5.12h4.48v14.08h6.4z"
+              ></path>
+            </svg>
+          </a>
+  
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://twitter.com/123presets"
+            title="123PRESETS on Twitter"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-twitter"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M31.281 6.733q-1.304 1.924-3.13 3.26 0 .13.033.408t.033.408q0 2.543-.75 5.086t-2.282 4.858-3.635 4.108-5.053 2.869-6.341 1.076q-5.282 0-9.65-2.836.913.065 1.5.065 4.401 0 7.857-2.673-2.054-.033-3.668-1.255t-2.266-3.146q.554.13 1.206.13.88 0 1.663-.261-2.184-.456-3.619-2.184t-1.435-3.977v-.065q1.239.652 2.836.717-1.271-.848-2.021-2.233t-.75-2.983q0-1.63.815-3.195 2.38 2.967 5.754 4.678t7.319 1.907q-.228-.815-.228-1.434 0-2.608 1.858-4.45t4.532-1.842q1.304 0 2.51.522t2.054 1.467q2.152-.424 4.01-1.532-.685 2.217-2.771 3.488 1.989-.261 3.619-.978z"
+              ></path>
+            </svg>
+          </a>
+  
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://pinterest.com/123presets"
+            title="123PRESETS on Pinterest"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-pinterest"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M27.52 9.6c-.64-5.76-6.4-8.32-12.8-7.68-4.48.64-9.6 4.48-9.6 10.24 0 3.2.64 5.76 3.84 6.4 1.28-2.56-.64-3.2-.64-4.48-1.28-7.04 8.32-12.16 13.44-7.04 3.2 3.84 1.28 14.08-4.48 13.44-5.12-1.28 2.56-9.6-1.92-11.52-3.2-1.28-5.12 4.48-3.84 7.04-1.28 4.48-3.2 8.96-1.92 15.36 2.56-1.92 3.84-5.76 4.48-9.6 1.28.64 1.92 1.92 3.84 1.92 6.4-.64 10.24-7.68 9.6-14.08z"
+              ></path>
+            </svg>
+          </a>
+  
+          <a
+            target="_blank"
+            rel="noopener"
+            href="https://instagram.com/123presets"
+            title="123PRESETS on Instagram"
+          >
+            <svg
+              aria-hidden="true"
+              focusable="false"
+              role="presentation"
+              class="icon icon-instagram"
+              viewBox="0 0 32 32"
+            >
+              <path
+                fill="#444"
+                d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"
+              ></path>
+              <path
+                fill="#444"
+                d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+  
+        <div class="accordion" id="accordionExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                SHOP
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul class="site-footer-links">
+                  <li><a href="">lightroom presets</a></li>
+                  <li><a href="">save & get bundle</a></li>
+                  <li><a href="">video luts</a></li>
+                  <li><a href="">instagram highlight covers</a></li>
+                  <li><a href="">canva templates</a></li>
+                  <li><a href="">123Case</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                BRAND
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionExample"
+            >
+              <div class="accordion-body">
+                <ul class="site-footer-links">
+                  <li><a href="">CONTACT US</a></li>
+                  <li><a href="">HOW TO USE</a></li>
+                  <li><a href="">ABOUT US</a></li>
+                  <li><a href="">PRESETS quiz</a></li>
+                  <li><a href="">reviews</a></li>
+                  <li><a href="">affiliate program</a></li>
+                  <li><a href="">F.A.Q</a></li>
+                  <li><a href="">file licences</a></li>
+                  <li><a href="">refund policy</a></li>
+                  <li><a href="">privacy policy</a></li>
+                  <li><a href="">shipping infomation</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="signupandsave">
+          <div class="signuphead">sign up and save</div>
+          <p>
+            Subscribe to get special offers, free giveaways, and
+            once-in-a-lifetime deals.
+          </p>
+  
+          <form action="">
+            <input type="text" placeholder="Enter your email" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="{1.5}"
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              />
+            </svg>
+          </form>
+        </div>
+  
+        <div class="footerpayload">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            viewBox="0 0 38 24"
+            width="38"
+            height="24"
+            aria-labelledby="pi-american_express"
+          >
+            <title id="pi-american_express">American Express</title>
+            <g fill="none">
+              <path
+                fill="#000"
+                d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
+                opacity=".07"
+              ></path>
+              <path
+                fill="#006FCF"
+                d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1"
+              ></path>
+              <path
+                fill="#FFF"
+                d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z"
+              ></path>
+            </g>
+          </svg>
+          <svg
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            x="0"
+            y="0"
+            width="38"
+            height="24"
+            viewBox="0 0 165.521 105.965"
+            xml:space="preserve"
+            aria-labelledby="pi-apple_pay"
+          >
+            <title id="pi-apple_pay">Apple Pay</title>
+            <path
+              fill="#000"
+              d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z"
+            ></path>
+            <path
+              fill="#FFF"
+              d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875"
+            ></path>
+            <g>
+              <g>
+                <path
+                  fill="#000"
+                  d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858"
+                ></path>
+                <path
+                  fill="#000"
+                  d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048"
+                ></path>
+              </g>
+              <g>
+                <path
+                  fill="#000"
+                  d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z"
+                ></path>
+                <path
+                  fill="#000"
+                  d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z"
+                ></path>
+                <path
+                  fill="#000"
+                  d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z"
+                ></path>
+              </g>
+            </g>
+          </svg>
+          <svg
+            viewBox="0 0 38 24"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            width="38"
+            height="24"
+            aria-labelledby="pi-master"
+          >
+            <title id="pi-master">Mastercard</title>
+            <path
+              opacity=".07"
+              d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+            ></path>
+            <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
+            <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
+            <path
+              fill="#FF5F00"
+              d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"
+            ></path>
+          </svg>
+          <svg
+            viewBox="0 0 38 24"
+            xmlns="http://www.w3.org/2000/svg"
+            width="38"
+            height="24"
+            role="img"
+            aria-labelledby="pi-paypal"
+          >
+            <title id="pi-paypal">PayPal</title>
+            <path
+              opacity=".07"
+              d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+            ></path>
+            <path
+              fill="#003087"
+              d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"
+            ></path>
+            <path
+              fill="#3086C8"
+              d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"
+            ></path>
+            <path
+              fill="#012169"
+              d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"
+            ></path>
+          </svg>
+          <svg
+            viewBox="0 0 38 24"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            width="38"
+            height="24"
+            aria-labelledby="pi-visa"
+          >
+            <title id="pi-visa">Visa</title>
+            <path
+              opacity=".07"
+              d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"
+            ></path>
+            <path
+              fill="#fff"
+              d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"
+            ></path>
+            <path
+              d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
+              fill="#142688"
+            ></path>
+          </svg>
+        </div>
+  
+        <div class="footerpoweredby">
+          <h5>© 2023 123PRESETS</h5>
+          <p>Powered by Shopify</p>
+        </div>
+      </div>
+  
+      <div class="footerdesktop">
+        <div class="firstcol">
+          <div class="footerlogo">
+            <img src="images/logo.png" alt="logo" />
+          </div>
+          <div class="footer__social">
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://www.facebook.com/123PRESETS/"
+              title="123PRESETS on Facebook"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-facebook"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M18.56 31.36V17.28h4.48l.64-5.12h-5.12v-3.2c0-1.28.64-2.56 2.56-2.56h2.56V1.28H19.2c-3.84 0-7.04 2.56-7.04 7.04v3.84H7.68v5.12h4.48v14.08h6.4z"
+                ></path>
+              </svg>
+            </a>
+  
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://twitter.com/123presets"
+              title="123PRESETS on Twitter"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-twitter"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M31.281 6.733q-1.304 1.924-3.13 3.26 0 .13.033.408t.033.408q0 2.543-.75 5.086t-2.282 4.858-3.635 4.108-5.053 2.869-6.341 1.076q-5.282 0-9.65-2.836.913.065 1.5.065 4.401 0 7.857-2.673-2.054-.033-3.668-1.255t-2.266-3.146q.554.13 1.206.13.88 0 1.663-.261-2.184-.456-3.619-2.184t-1.435-3.977v-.065q1.239.652 2.836.717-1.271-.848-2.021-2.233t-.75-2.983q0-1.63.815-3.195 2.38 2.967 5.754 4.678t7.319 1.907q-.228-.815-.228-1.434 0-2.608 1.858-4.45t4.532-1.842q1.304 0 2.51.522t2.054 1.467q2.152-.424 4.01-1.532-.685 2.217-2.771 3.488 1.989-.261 3.619-.978z"
+                ></path>
+              </svg>
+            </a>
+  
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://pinterest.com/123presets"
+              title="123PRESETS on Pinterest"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-pinterest"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M27.52 9.6c-.64-5.76-6.4-8.32-12.8-7.68-4.48.64-9.6 4.48-9.6 10.24 0 3.2.64 5.76 3.84 6.4 1.28-2.56-.64-3.2-.64-4.48-1.28-7.04 8.32-12.16 13.44-7.04 3.2 3.84 1.28 14.08-4.48 13.44-5.12-1.28 2.56-9.6-1.92-11.52-3.2-1.28-5.12 4.48-3.84 7.04-1.28 4.48-3.2 8.96-1.92 15.36 2.56-1.92 3.84-5.76 4.48-9.6 1.28.64 1.92 1.92 3.84 1.92 6.4-.64 10.24-7.68 9.6-14.08z"
+                ></path>
+              </svg>
+            </a>
+  
+            <a
+              target="_blank"
+              rel="noopener"
+              href="https://instagram.com/123presets"
+              title="123PRESETS on Instagram"
+            >
+              <svg
+                aria-hidden="true"
+                focusable="false"
+                role="presentation"
+                class="icon icon-instagram"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#444"
+                  d="M16 3.094c4.206 0 4.7.019 6.363.094 1.538.069 2.369.325 2.925.544.738.287 1.262.625 1.813 1.175s.894 1.075 1.175 1.813c.212.556.475 1.387.544 2.925.075 1.662.094 2.156.094 6.363s-.019 4.7-.094 6.363c-.069 1.538-.325 2.369-.544 2.925-.288.738-.625 1.262-1.175 1.813s-1.075.894-1.813 1.175c-.556.212-1.387.475-2.925.544-1.663.075-2.156.094-6.363.094s-4.7-.019-6.363-.094c-1.537-.069-2.369-.325-2.925-.544-.737-.288-1.263-.625-1.813-1.175s-.894-1.075-1.175-1.813c-.212-.556-.475-1.387-.544-2.925-.075-1.663-.094-2.156-.094-6.363s.019-4.7.094-6.363c.069-1.537.325-2.369.544-2.925.287-.737.625-1.263 1.175-1.813s1.075-.894 1.813-1.175c.556-.212 1.388-.475 2.925-.544 1.662-.081 2.156-.094 6.363-.094zm0-2.838c-4.275 0-4.813.019-6.494.094-1.675.075-2.819.344-3.819.731-1.037.4-1.913.944-2.788 1.819S1.486 4.656 1.08 5.688c-.387 1-.656 2.144-.731 3.825-.075 1.675-.094 2.213-.094 6.488s.019 4.813.094 6.494c.075 1.675.344 2.819.731 3.825.4 1.038.944 1.913 1.819 2.788s1.756 1.413 2.788 1.819c1 .387 2.144.656 3.825.731s2.213.094 6.494.094 4.813-.019 6.494-.094c1.675-.075 2.819-.344 3.825-.731 1.038-.4 1.913-.944 2.788-1.819s1.413-1.756 1.819-2.788c.387-1 .656-2.144.731-3.825s.094-2.212.094-6.494-.019-4.813-.094-6.494c-.075-1.675-.344-2.819-.731-3.825-.4-1.038-.944-1.913-1.819-2.788s-1.756-1.413-2.788-1.819c-1-.387-2.144-.656-3.825-.731C20.812.275 20.275.256 16 .256z"
+                ></path>
+                <path
+                  fill="#444"
+                  d="M16 7.912a8.088 8.088 0 0 0 0 16.175c4.463 0 8.087-3.625 8.087-8.088s-3.625-8.088-8.088-8.088zm0 13.338a5.25 5.25 0 1 1 0-10.5 5.25 5.25 0 1 1 0 10.5zM26.294 7.594a1.887 1.887 0 1 1-3.774.002 1.887 1.887 0 0 1 3.774-.003z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="secondcol">
+          <div class="footerhead"><a href="">shop</a></div>
+          <ul>
+            <li><a href="">LIGHTROOM PRESETS</a></li>
+            <li><a href=""> SAVE & GET BUNDLE</a></li>
+            <li><a href="">video luts</a></li>
+            <li><a href="">instagram highlight covers</a></li>
+            <li><a href="">canva temlates</a></li>
+            <li><a href="">123case</a></li>
+          </ul>
+        </div>
+        <div class="thirdcol">
+          <div class="footerhead"><a href="">brand</a></div>
+          <ul>
+            <li><a href="">contact</a></li>
+            <li><a href="">how to use</a></li>
+            <li><a href="">about us</a></li>
+            <li><a href="">presets quiz</a></li>
+            <li><a href="">reviews</a></li>
+            <li><a href="">affiliate program</a></li>
+            <li><a href="">file licences</a></li>
+            <li><a href="">refund policy</a></li>
+            <li><a href="">privacy policy</a></li>
+            <li><a href="">shipping information</a></li>
+          </ul>
+        </div>
+        <div class="signupandsave">
+          <div class="signuphead">sign up and save</div>
+          <p>
+            Subscribe to get special offers, free giveaways, and
+            once-in-a-lifetime deals.
+          </p>
+  
+          <form action="">
+            <input type="text" placeholder="Enter your email" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"
+              />
+            </svg>
+          </form>
+        </div>
+  
+        <div class="footerpoweredby">
+          <h5>© 2023 123PRESETS</h5>
+          <p>Powered by Shopify</p>
+        </div>
+      </div>
+
+    </footer>
+  <script>
+ 
+  </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <script  src="javascript/main.js" defer></script>
+  </body>
+</html>
