@@ -11,7 +11,6 @@ function toggleButton(clickedButton) {
   });
 }
 
-
 $(document).ready(function () {
   $(".slider_inner").slick({
     dots: false,
@@ -432,3 +431,28 @@ function validateEmail(email) {
   var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
 }
+
+
+$(document).ready(function() {
+  $('.with-submenu').click(function() {
+    $(this).find('.blog_sidebar_submenu').slideToggle();
+    $(this).toggleClass('active');
+
+    // Update the arrow direction
+    $(this)
+      .find('.svg-arrow')
+      .toggleClass('rotate-down', $(this).hasClass('active'));
+    
+    $(this)
+      .siblings('.with-submenu')
+      .removeClass('active')
+      .find('.blog_sidebar_submenu')
+      .slideUp();
+    
+    // Reset the arrow direction for other items
+    $(this)
+      .siblings('.with-submenu')
+      .find('.svg-arrow')
+      .removeClass('rotate-down');
+  });
+});
