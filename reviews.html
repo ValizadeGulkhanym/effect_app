@@ -47,37 +47,7 @@
     />
   </head>
   <body>
-    <style>
-      .star {
-        font-size: 36px;
-        cursor: pointer;
-      }
-
-      .one {
-        color: rgb(169, 24, 29);
-      }
-
-      .two {
-        color: rgb(169, 24, 29);
-      }
-
-      .three {
-        color: rgb(169, 24, 29);
-      }
-
-      .four {
-        color: rgb(169, 24, 29);
-      }
-
-      .five {
-        color: rgb(169, 24, 29);
-      }
-      .featured {
-        background: #fff;
-        color: rgb(52, 51, 51);
-        width: 230px;
-      }
-    </style>
+  
 
     <div class="reviews_page">
       <div class="reviews_active_part">
@@ -144,21 +114,21 @@
           </li>
         </div>
 
-        <div class="ui container">
+        <div class="sortBy_btn">
           <div class="ui compact menu">
             <div class="ui simple dropdown item">
               <i class="fa-solid fa-sliders"></i>
 
-              <div class="menu">
+              <div class="menu " id="sortBy_menu">
                 <div class="item">Sort by</div>
-                <div class="item">featured</div>
+                <div class="item">Featured</div>
                 <div class="item">Newest</div>
                 <div class="item">Highest Reviews</div>
                 <div class="item">Lowest Reviews</div>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
 
       <!-- Button trigger modal -->
@@ -190,38 +160,38 @@
               ></button>
             </div>
             <div class="modal-body review_modal_body">
+  
               <div class="reviews_h1_wrapper">
                 <h1>How would you rate this item ?</h1>
               </div>
-              <div>
-                <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
-                </div>
-              </div>
+              <form class="review_modal_form" type="submit" action="">
+             
+                  <div class="stars_wrapper">
+                    <span onclick="gfg(1)" class="star">★ </span>
+                    <span onclick="gfg(2)" class="star">★ </span>
+                    <span onclick="gfg(3)" class="star">★ </span>
+                    <span onclick="gfg(4)" class="star">★ </span>
+                    <span onclick="gfg(5)" class="star">★ </span>
+                  </div>
 
-
-              <label for="fileInput" class="custom-file-upload">
-                <i class="fa-regular fa-image"></i> Add photos
-              </label>
-              <input type="file" id="fileInput" class="add_fotos" style="display:none;">
+                  <label for="fileInput" class="custom-file-upload" onclick="document.getElementById('fileInput').click()">
+                    <i class="fa-regular fa-image"></i> Add photos
+                </label>
+                <input type="file" id="fileInput" class="add_fotos" style="display:none;">
+                
               <div class="reviews_h1_wrapper">
                 <h1>tell us more</h1>
               </div>
               <textarea
-                id="textarea" 
+                id="leave_review" 
                 placeholder="Share your experience"
                 name="text"
                 cols="30"
                 rows="10"
               ></textarea>
 
-              <form class="review_modal_form" action="">
                 <div class="label_and_input_wrapper">
-                  <label for="">Full Name</label>
+                  <label for="">full name</label>
                   <input type="name" />
                 </div>
                 <div class="label_and_input_wrapper">
@@ -231,16 +201,7 @@
               </form>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
-              </button>
+            
             </div>
           </div>
         </div>
