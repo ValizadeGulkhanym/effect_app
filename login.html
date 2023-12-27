@@ -472,7 +472,7 @@
     <div class="effect_login_wrapper">
       <div class="effect_login_title">login</div>
       <div id="errorMessages"></div>
-      <form id="login_form" action="" method="">
+      <form id="login_form">
         <label for="email">Email</label>
         <input
           class="effect_login_input"
@@ -481,10 +481,12 @@
           name="email"
           required
         />
+
         <div class="password-label">
           <label for="password">Password</label>
-          <a class="forgot-password" href="forget.html">Forgot?</a>
+          <div class="forgot-password" onclick="">Forgot?</div>
         </div>
+
         <input
           class="effect_login_input"
           type="password"
@@ -492,13 +494,14 @@
           name="password"
           required
         />
+
         <button class="login_btn" type="button" onclick="validateLogin()">
           Sign in
         </button>
       </form>
 
       <div class="login_create_account_link">
-        <a href="./signup.html">create account</a>
+        <a href="/signup.html">create account</a>
       </div>
     </div>
     <hr />

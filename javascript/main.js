@@ -296,52 +296,16 @@ function validateLogin() {
 }
 
 //sign up
+
 document.addEventListener("DOMContentLoaded", function () {
   var form = document.querySelector("#signup_form");
   var errorMessages = document.querySelector("#error-message");
   var passwordStrength = document.querySelector("#password-strength");
 
-  function validatePassword(password) {
-    // Customize these rules to match your password requirements
-    const minLength = 6;
-    const hasUpperCase = /[A-Z]/.test(password);
-    const hasLowerCase = /[a-z]/.test(password);
-    const hasNumber = /\d/.test(password);
-  
-    return (
-      password.length >= minLength && hasUpperCase && hasLowerCase && hasNumber
-    );
-  }
-  
-  function validateEmail(email) {
-    // Use a regular expression to check if the email is valid
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    return emailRegex.test(email);
-  }
-  
-   // Validate email
-   if (!validateEmail(emailInput.value)) {
-    console.log("Invalid email");
-    errorMessages.textContent = "Düzgün email ünvanı daxil edin.";
-    errorMessages.style.border = "1px solid rgb(208, 46, 46)";
-    errorMessages.style.backgroundColor = "#fff6f6";
-    errorMessages.style.paddingBlock = "10px";
-    return;
-  }
-
-  // Validate password
-  if (!validatePassword(passwordInput.value)) {
-    console.log("Invalid password");
-    errorMessages.textContent = "Şifrə 6 simvol böyük və kiçik hərflərdən və rəqəmdən ibarət olmalıdır!";
-    errorMessages.style.border = "1px solid rgb(208, 46, 46)";
-    errorMessages.style.backgroundColor = "#fff6f6";
-    return;
-  }
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     var validationPassed = validateSignupForm();
 
-   
     if (validationPassed) {
       // If all validations pass, you can submit the form or perform further actions
       // For this example, we'll display a success message
@@ -447,8 +411,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
-
-
 
 
 //reset

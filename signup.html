@@ -1,342 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!--Swiper Slider-->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-   <!--font awesome-->
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
- />
-  <!--Swiper Slider-->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap"
+      rel="stylesheet"
+    />
 
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet" />
+    <!-- Bootstrap CSS  -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
 
-  <!-- Bootstrap CSS  -->
-  <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
 
-  <!-- Slick Slider CSS -->
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
-  <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+    />
+  </head>
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
-</head>
-
-
-
-<body>
-  <!-- Modal Search Starts-->
-  <div id="id01" class="w3-modal effect_page_main_input">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'"
-          class="w3-button w3-display-topright">&times;</span>
-        <form action="" method="">
-          <input type="text" placeholder="Effekt axtar..." />
-          <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Search Ends -->
-
-  <!-- Modal basket-->
-  <div class="modal basket_modal" id="exampleModalLong" tabindex="-1" role="dialog"
-    aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog " role="document">
-      <div class="modal-content">
-        <div class="modal-header1">
-          <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="basket-modal-body scrollbar">
-          <div class="basket_modal_card ">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
-            <div class="basket_card_desc">
-              <div class="basket_card_title">
-                <a href="">NO FILTER LIGHTROOM PRESETS</a>
-              </div>
-              <div class="cart__variant-meta">Mobile</div>
-            </div>
-            <div class="basket_card_X_and_price_box">
-              <div class="delete_preset">&times;</div>
-              <div class="preset_price">$15</div>
-            </div>
-          </div>
-          <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
-            <div class="basket_card_desc">
-              <div class="basket_card_title">
-                <a href="">NO FILTER LIGHTROOM PRESETS</a>
-              </div>
-              <div class="cart__variant-meta">Mobile</div>
-            </div>
-            <div class="basket_card_X_and_price_box">
-              <div class="delete_preset">&times;</div>
-              <div class="preset_price">$15</div>
-            </div>
-          </div>
-          <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
-            <div class="basket_card_desc">
-              <div class="basket_card_title">
-                <a href="">NO FILTER LIGHTROOM PRESETS</a>
-              </div>
-              <div class="cart__variant-meta">Mobile</div>
-            </div>
-            <div class="basket_card_X_and_price_box">
-              <div class="delete_preset">&times;</div>
-              <div class="preset_price">$15</div>
-            </div>
-          </div>
-          <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
-            <div class="basket_card_desc">
-              <div class="basket_card_title">
-                <a href="">NO FILTER LIGHTROOM PRESETS</a>
-              </div>
-              <div class="cart__variant-meta">Mobile</div>
-            </div>
-            <div class="basket_card_X_and_price_box">
-              <div class="delete_preset">&times;</div>
-              <div class="preset_price">$15</div>
-            </div>
-          </div>
-          <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
-            <div class="basket_card_desc">
-              <div class="basket_card_title">
-                <a href="">NO FILTER LIGHTROOM PRESETS</a>
-              </div>
-              <div class="cart__variant-meta">Mobile</div>
-            </div>
-            <div class="basket_card_X_and_price_box">
-              <div class="delete_preset">x</div>
-              <div class="preset_price">$15</div>
-            </div>
-          </div>
-        </div>
-        <div class="basket-modal-footer">
-          <div class="subtotal_and_price_wrapper">
-            <div class="subtotal">subtotal</div>
-            <div class="total_price">$150</div>
-          </div>
-          <button type="button" class="basket_checkout_btn">check out</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--modal end-->
-
-  <!-- Modal Search-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="effect_page_main_input">
-            <input class="" type="text" placeholder="Effekt axtar..." />
-            <div class="search_svg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+  <body>
+    <!-- Modal Search Starts-->
+    <div id="id01" class="w3-modal effect_page_main_input">
+      <div class="w3-modal-content">
+        <div class="w3-container">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="w3-button w3-display-topright"
+            >&times;</span
+          >
+          <form action="" method="">
+            <input type="text" placeholder="Effekt axtar..." />
+            <button type="submit">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="w-6 h-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                />
               </svg>
-            </div>
-            <div class="exit_svg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+            </button>
+          </form>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Modal Search -->
+    <!-- Modal Search Ends -->
 
-
-  <!-- HEADER STARTS -->
-  <div class="site-mobile-menu site-navbar-target">
-    <div class="site-mobile-menu-header">
-      <div class="site-mobile-menu-close mt-3">
-        <span class="icon-close2 js-menu-toggle"></span>
-      </div>
-    </div>
-    <div class="site-mobile-menu-body"></div>
-  </div>
-  <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-    <div class="container">
-      <div class="row align-items-center position-relative navbar-effect-header">
-        <div class="col-lg-2 header-logo">
-          <div class="site-logo">
-            <a href="./index.html">
-              <img src="https://123presets.store/cdn/shop/files/image_45_2_170x.png?v=1623531317" alt="" />
-            </a>
+    <!-- Modal basket-->
+    <div
+      class="modal basket_modal"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header1">
+            <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="basket-modal-body scrollbar">
+            <div class="basket_modal_card">
+              <img
+                src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999"
+                alt=""
+              />
+              <div class="basket_card_desc">
+                <div class="basket_card_title">
+                  <a href="">NO FILTER LIGHTROOM PRESETS</a>
+                </div>
+                <div class="cart__variant-meta">Mobile</div>
+              </div>
+              <div class="basket_card_X_and_price_box">
+                <div class="delete_preset">&times;</div>
+                <div class="preset_price">$15</div>
+              </div>
+            </div>
+            <div class="basket_modal_card">
+              <img
+                src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999"
+                alt=""
+              />
+              <div class="basket_card_desc">
+                <div class="basket_card_title">
+                  <a href="">NO FILTER LIGHTROOM PRESETS</a>
+                </div>
+                <div class="cart__variant-meta">Mobile</div>
+              </div>
+              <div class="basket_card_X_and_price_box">
+                <div class="delete_preset">&times;</div>
+                <div class="preset_price">$15</div>
+              </div>
+            </div>
+            <div class="basket_modal_card">
+              <img
+                src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999"
+                alt=""
+              />
+              <div class="basket_card_desc">
+                <div class="basket_card_title">
+                  <a href="">NO FILTER LIGHTROOM PRESETS</a>
+                </div>
+                <div class="cart__variant-meta">Mobile</div>
+              </div>
+              <div class="basket_card_X_and_price_box">
+                <div class="delete_preset">&times;</div>
+                <div class="preset_price">$15</div>
+              </div>
+            </div>
+            <div class="basket_modal_card">
+              <img
+                src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999"
+                alt=""
+              />
+              <div class="basket_card_desc">
+                <div class="basket_card_title">
+                  <a href="">NO FILTER LIGHTROOM PRESETS</a>
+                </div>
+                <div class="cart__variant-meta">Mobile</div>
+              </div>
+              <div class="basket_card_X_and_price_box">
+                <div class="delete_preset">&times;</div>
+                <div class="preset_price">$15</div>
+              </div>
+            </div>
+            <div class="basket_modal_card">
+              <img
+                src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999"
+                alt=""
+              />
+              <div class="basket_card_desc">
+                <div class="basket_card_title">
+                  <a href="">NO FILTER LIGHTROOM PRESETS</a>
+                </div>
+                <div class="cart__variant-meta">Mobile</div>
+              </div>
+              <div class="basket_card_X_and_price_box">
+                <div class="delete_preset">x</div>
+                <div class="preset_price">$15</div>
+              </div>
+            </div>
+          </div>
+          <div class="basket-modal-footer">
+            <div class="subtotal_and_price_wrapper">
+              <div class="subtotal">subtotal</div>
+              <div class="total_price">$150</div>
+            </div>
+            <button type="button" class="basket_checkout_btn">check out</button>
           </div>
         </div>
+      </div>
+    </div>
+    <!--modal end-->
 
-        <div class="col-lg-8 header-middle">
-          <nav class="site-navigation text-center ml-auto " role="navigation">
-
-            <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-              <li class="has-children">
-                <a href="#" class="nav-link"> LIGHTROOM PRESETS </a>
-                <i class="fa fa-chevron-down"></i>
-                <ul class="dropdown arrow-top">
-                  <li><a href="" class="nav-link">BEST-SELLING PRESENTS</a></li>
-                  <li><a href="" class="nav-link">HOLIDAY COLLECTION</a></li>
-                  <li><a href="" class="nav-link">NEW RELEASES</a></li>
-
-                  <li class="has-children">
-                    <a href="#"> PRESETS BY SEASON </a>
-                    <i class="fa fa-chevron-down"></i>
-                    <ul class="dropdown">
-                      <li><a href="#">MENU ONE</a></li>
-                      <li><a href="#">MENU TWO</a></li>
-                      <li><a href="#">MENU THREE</a></li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="#"> PRESETS BY TONE</a>
-                    <i class="fa fa-chevron-down"></i>
-                    <ul class="dropdown">
-                      <li><a href="#">MENU ONE</a></li>
-                      <li><a href="#">MENU TWO</a></li>
-                      <li><a href="#">MENU THREE</a></li>
-                    </ul>
-                  </li>
-                  <li class="has-children">
-                    <a href="#"> PRESETS BY LIFESTYLE</a>
-                    <i class="fa fa-chevron-down"></i>
-                    <ul class="dropdown">
-                      <li><a href="#">MENU ONE</a></li>
-                      <li><a href="#">MENU TWO</a></li>
-                      <li><a href="#">MENU THREE</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="#services-section" class="nav-link">
-                  Video luts </a></li>
-
-
-              <li class="has-children">
-                <a href="" class="nav-link">
-                  123CASE </a>
-                <i class="fa fa-chevron-down"></i>
-                <ul class="dropdown arrow-top">
-                  <li><a href="" class="nav-link">Team</a></li>
-                  <li><a href="" class="nav-link">Pricing</a></li>
-                  <li><a href="" class="nav-link">FAQ</a></li>
-                  <li class="has-children">
-                    <a href="#">More Links</a>
-                    <ul class="dropdown">
-                      <li><a href="#">Menu One</a></li>
-                      <li><a href="#">Menu Two</a></li>
-                      <li><a href="#">Menu Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li><a href="" class="nav-link">F.A.Q</a></li>
-
-              <li><a href="" class="nav-link">Brand</a></li>
-            </ul>
-          </nav>
-
-        </div>
-        <div class="col-lg-2 header-right">
-          <div class="effect_header_right">
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                class="site-menu-toggle js-menu-toggle text-black"><span class="fa fa-bars h3"></span></a>
-            </div>
-
-            <div class="effect_header_icon">
-              <a href="./login.html"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                  stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z">
-                  </path>
+    <!-- Modal Search-->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="effect_page_main_input">
+              <input class="" type="text" placeholder="Effekt axtar..." />
+              <div class="search_svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  />
                 </svg>
+              </div>
+              <div class="exit_svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Search -->
+
+    <!-- HEADER STARTS -->
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header
+      class="site-navbar js-sticky-header site-navbar-target"
+      role="banner"
+    >
+      <div class="container">
+        <div
+          class="row align-items-center position-relative navbar-effect-header"
+        >
+          <div class="col-lg-2 header-logo">
+            <div class="site-logo">
+              <a href="./index.html">
+                <img
+                  src="https://123presets.store/cdn/shop/files/image_45_2_170x.png?v=1623531317"
+                  alt=""
+                />
               </a>
             </div>
-            <div class="effect_header_icon">
-              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-              </button>
-            </div>
+          </div>
 
-            <div class="effect_header_icon">
-              <button type="button" class="btn fav_btn position-relative">
-                <a href="./wishlist.html">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z">
-                    </path>
+          <div class="col-lg-8 header-middle">
+            <nav class="site-navigation text-center ml-auto" role="navigation">
+              <ul
+                class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block"
+              >
+                <li class="has-children">
+                  <a href="#" class="nav-link"> LIGHTROOM PRESETS </a>
+                  <i class="fa fa-chevron-down"></i>
+                  <ul class="dropdown arrow-top">
+                    <li>
+                      <a href="" class="nav-link">BEST-SELLING PRESENTS</a>
+                    </li>
+                    <li><a href="" class="nav-link">HOLIDAY COLLECTION</a></li>
+                    <li><a href="" class="nav-link">NEW RELEASES</a></li>
+
+                    <li class="has-children">
+                      <a href="#"> PRESETS BY SEASON </a>
+                      <i class="fa fa-chevron-down"></i>
+                      <ul class="dropdown">
+                        <li><a href="#">MENU ONE</a></li>
+                        <li><a href="#">MENU TWO</a></li>
+                        <li><a href="#">MENU THREE</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <a href="#"> PRESETS BY TONE</a>
+                      <i class="fa fa-chevron-down"></i>
+                      <ul class="dropdown">
+                        <li><a href="#">MENU ONE</a></li>
+                        <li><a href="#">MENU TWO</a></li>
+                        <li><a href="#">MENU THREE</a></li>
+                      </ul>
+                    </li>
+                    <li class="has-children">
+                      <a href="#"> PRESETS BY LIFESTYLE</a>
+                      <i class="fa fa-chevron-down"></i>
+                      <ul class="dropdown">
+                        <li><a href="#">MENU ONE</a></li>
+                        <li><a href="#">MENU TWO</a></li>
+                        <li><a href="#">MENU THREE</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#services-section" class="nav-link"> Video luts </a>
+                </li>
+
+                <li class="has-children">
+                  <a href="" class="nav-link"> 123CASE </a>
+                  <i class="fa fa-chevron-down"></i>
+                  <ul class="dropdown arrow-top">
+                    <li><a href="" class="nav-link">Team</a></li>
+                    <li><a href="" class="nav-link">Pricing</a></li>
+                    <li><a href="" class="nav-link">FAQ</a></li>
+                    <li class="has-children">
+                      <a href="#">More Links</a>
+                      <ul class="dropdown">
+                        <li><a href="#">Menu One</a></li>
+                        <li><a href="#">Menu Two</a></li>
+                        <li><a href="#">Menu Three</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li><a href="" class="nav-link">F.A.Q</a></li>
+
+                <li><a href="" class="nav-link">Brand</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-2 header-right">
+            <div class="effect_header_right">
+              <div class="toggle-button d-inline-block d-lg-none">
+                <a href="#" class="site-menu-toggle js-menu-toggle text-black"
+                  ><span class="fa fa-bars h3"></span
+                ></a>
+              </div>
+
+              <div class="effect_header_icon">
+                <a href="./login.html"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+                    ></path>
                   </svg>
-                  <span class="position-absolute text-light translate-middle p-2 border border-light rounded-circle">5
-                  </span>
                 </a>
+              </div>
+              <div class="effect_header_icon">
+                <button
+                  onclick="document.getElementById('id01').style.display='block'"
+                  class="w3-button"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                    />
+                  </svg>
+                </button>
+              </div>
 
-              </button>
-            </div>
-            <div class="effect_header_icon">
-              <!-- Button trigger modal -->
-              <button type="button" class="basket_modal_btn relative" data-toggle="modal"
-                data-target="#exampleModalLong">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                  stroke="currentColor" class="w-6 h-6">
-                  <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
-                  </path>
-                </svg>
-                <span class="position-absolute translate-middle text-light border rounded-circle">3
-                </span>
-              </button>
-              <br>
+              <div class="effect_header_icon">
+                <button type="button" class="btn fav_btn position-relative">
+                  <a href="./wishlist.html">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      ></path>
+                    </svg>
+                    <span
+                      class="position-absolute text-light translate-middle p-2 border border-light rounded-circle"
+                      >5
+                    </span>
+                  </a>
+                </button>
+              </div>
+              <div class="effect_header_icon">
+                <!-- Button trigger modal -->
+                <button
+                  type="button"
+                  class="basket_modal_btn relative"
+                  data-toggle="modal"
+                  data-target="#exampleModalLong"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="w-6 h-6"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
+                    ></path>
+                  </svg>
+                  <span
+                    class="position-absolute translate-middle text-light border rounded-circle"
+                    >3
+                  </span>
+                </button>
+                <br />
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-  </header>
-  <!-- HEADER ENDS -->
+    </header>
+    <!-- HEADER ENDS -->
 
     <div class="effect_signup_wrapper">
       <div class="effect_signup_title">create account</div>
@@ -379,10 +510,11 @@
         />
         <div id="password-strength" class="password-strength"></div>
 
-        <button class="signup_btn" type="submit" onclick="validateLogin()">Create</button>
+        <button class="signup_btn" type="submit" onclick="validateLogin()">
+          Create
+        </button>
       </form>
     </div>
-
     <footer>
       <div class="footermobile">
         <div class="footerlogo">
@@ -397,7 +529,7 @@
           >
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-  
+
           <a
             target="_blank"
             rel="noopener"
@@ -406,7 +538,7 @@
           >
             <i class="fa-brands fa-twitter"></i>
           </a>
-  
+
           <a
             target="_blank"
             rel="noopener"
@@ -415,7 +547,7 @@
           >
             <i class="fa-brands fa-whatsapp"></i>
           </a>
-  
+
           <a
             target="_blank"
             rel="noopener"
@@ -425,7 +557,7 @@
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
-  
+
         <div class="accordion" id="accordionExample">
           <div class="accordion-item">
             <h2 class="accordion-header">
@@ -494,14 +626,14 @@
             </div>
           </div>
         </div>
-  
+
         <div class="signupandsave">
           <div class="signuphead">sign up and save</div>
           <p>
             Subscribe to get special offers, free giveaways, and
             once-in-a-lifetime deals.
           </p>
-  
+
           <form action="">
             <input type="text" placeholder="Enter your email" />
             <svg
@@ -520,7 +652,7 @@
             </svg>
           </form>
         </div>
-  
+
         <div class="footerpayload">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -673,7 +805,7 @@
           </svg>
         </div>
       </div>
-  
+
       <div class="footerdesktop">
         <div class="firstcol">
           <div class="footerlogo">
@@ -688,7 +820,7 @@
             >
               <i class="fa-brands fa-facebook-f"></i>
             </a>
-  
+
             <a
               target="_blank"
               rel="noopener"
@@ -697,7 +829,7 @@
             >
               <i class="fa-brands fa-twitter"></i>
             </a>
-  
+
             <a
               target="_blank"
               rel="noopener"
@@ -706,7 +838,7 @@
             >
               <i class="fa-brands fa-whatsapp"></i>
             </a>
-  
+
             <a
               target="_blank"
               rel="noopener"
@@ -749,7 +881,7 @@
             Subscribe to get special offers, free giveaways, and
             once-in-a-lifetime deals.
           </p>
-  
+
           <form action="">
             <input type="text" placeholder="Enter your email" />
             <svg
@@ -778,23 +910,16 @@
         </div>
       </div>
     </footer>
-  
-  
+
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <script src="javascript/jquery.sticky.js"></script>
     <script src="javascript/header.js"></script>
-  
+
     <script src="javascript/bootstrap.bundle.min.js"></script>
     <script src="javascript/swiper-bundle.min.js"></script>
-  
+
     <script src="javascript/slick.min.js"></script>
     <script src="javascript/main.js"></script>
-  
-  
-  
   </body>
-  
-  </html>
-
-  
+</html>
