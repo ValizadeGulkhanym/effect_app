@@ -49,64 +49,77 @@ $(document).ready(function () {
 });
 
 // Инициализация превью слайдера
-const sliderThumbs = new Swiper('.slider__thumbs .swiper-container', { // ищем слайдер превью по селектору
+const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
+  // ищем слайдер превью по селектору
   // задаем параметры
-  direction: 'vertical', // вертикальная прокрутка
+  direction: "vertical", // вертикальная прокрутка
   slidesPerView: 7, // показывать по 3 превью
   spaceBetween: 24, // расстояние между слайдами
-  navigation: { // задаем кнопки навигации
-    nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev' // кнопка Prev
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: ".slider__next", // кнопка Next
+    prevEl: ".slider__prev", // кнопка Prev
   },
   freeMode: true, // при перетаскивании превью ведет себя как при скролле
-  breakpoints: { // условия для разных размеров окна браузера
-    0: { // при 0px и выше
-      direction: 'horizontal', // горизонтальная прокрутка
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: "horizontal", // горизонтальная прокрутка
       slidesPerView: 4,
     },
 
-    768: { // при 768px и выше
-      direction: 'vertical',
+    768: {
+      // при 768px и выше
+      direction: "vertical",
       slidesPerView: 4, // вертикальная прокрутка
     },
-    991: { // при 768px и выше
-      direction: 'vertical',
+    991: {
+      // при 768px и выше
+      direction: "vertical",
       slidesPerView: 5, // вертикальная прокрутка
     },
-    1400: { // при 768px и выше
-      direction: 'vertical',
+    1400: {
+      // при 768px и выше
+      direction: "vertical",
       slidesPerView: 7, // вертикальная прокрутка
-    }
-  }
+    },
+  },
 });
 // Инициализация слайдера изображений
-const sliderImages = new Swiper('.slider__images .swiper-container', { // ищем слайдер превью по селектору
+const sliderImages = new Swiper(".slider__images .swiper-container", {
+  // ищем слайдер превью по селектору
   // задаем параметры
-  direction: 'vertical', // вертикальная прокрутка
+  direction: "vertical", // вертикальная прокрутка
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
-  navigation: { // задаем кнопки навигации
-    nextEl: '.slider__next', // кнопка Next
-    prevEl: '.slider__prev' // кнопка Prev
+  navigation: {
+    // задаем кнопки навигации
+    nextEl: ".slider__next", // кнопка Next
+    prevEl: ".slider__prev", // кнопка Prev
   },
   grabCursor: true, // менять иконку курсора
-  thumbs: { // указываем на превью слайдер
-    swiper: sliderThumbs // указываем имя превью слайдера
+  thumbs: {
+    // указываем на превью слайдер
+    swiper: sliderThumbs, // указываем имя превью слайдера
   },
-  breakpoints: { // условия для разных размеров окна браузера
-    0: { // при 0px и выше
-      direction: 'horizontal', // горизонтальная прокрутка
+  breakpoints: {
+    // условия для разных размеров окна браузера
+    0: {
+      // при 0px и выше
+      direction: "horizontal", // горизонтальная прокрутка
     },
-    768: { // при 768px и выше
-      direction: 'vertical', // вертикальная прокрутка
-    }
-  }
+    768: {
+      // при 768px и выше
+      direction: "vertical", // вертикальная прокрутка
+    },
+  },
 });
-// ADD TO FAVORITE 
+// ADD TO FAVORITE
 function toggleFavorite(button) {
   // Toggle the 'favorite-active' class on the button
-  button.classList.toggle('favorite-active');
+  button.classList.toggle("favorite-active");
 }
 
 // Slick Slider
@@ -156,58 +169,56 @@ $(document).ready(function () {
   });
 });
 
-
-
-
 // Function to handle card deletion
 function deleteCard(deleteButton) {
   // Get the parent card element and remove it
-  var card = deleteButton.closest('.home_effectcard');
+  var card = deleteButton.closest(".home_effectcard");
 
   if (card) {
-    console.log('Deleting card with id:', card.id);
+    console.log("Deleting card with id:", card.id);
 
     card.remove();
-    var storedCards = JSON.parse(localStorage.getItem('cards')) || [];
+    var storedCards = JSON.parse(localStorage.getItem("cards")) || [];
 
-    // Get the index of the deleted card 
+    // Get the index of the deleted card
     var index = storedCards.findIndex(function (storedCard) {
       return storedCard.id === card.id; // Assuming each card has a unique identifier (id)
     });
 
-    // Remove the deleted card 
+    // Remove the deleted card
     if (index !== -1) {
       storedCards.splice(index, 1);
 
       // Update the local
-      localStorage.setItem('cards', JSON.stringify(storedCards));
-      console.log('Updated storedCards:', storedCards);
+      localStorage.setItem("cards", JSON.stringify(storedCards));
+      console.log("Updated storedCards:", storedCards);
     }
   }
 }
 
 // Attach the deleteCard function to all delete buttons with the class 'delete_btn'
-var deleteButtons = document.querySelectorAll('.delete_btn');
+var deleteButtons = document.querySelectorAll(".delete_btn");
 deleteButtons.forEach(function (button) {
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     deleteCard(this);
   });
 });
 
-
-
-
 //add to cart function
 function addToCart(productButton) {
   // Assuming you have some product data associated with the card
-  var productCard = productButton.closest('.home_effectcard');
-  var productName = productCard.querySelector('.effectcarddescription p').textContent;
-  var productPrice = productCard.querySelector('.wk-product-price--current').textContent;
+  var productCard = productButton.closest(".home_effectcard");
+  var productName = productCard.querySelector(
+    ".effectcarddescription p"
+  ).textContent;
+  var productPrice = productCard.querySelector(
+    ".wk-product-price--current"
+  ).textContent;
 
   // Create an object representing the product
   var product = {
     name: productName,
-    price: productPrice
+    price: productPrice,
     // Add other product details if needed
   };
 
@@ -221,20 +232,18 @@ function addToCart(productButton) {
   window.cart.push(product);
 
   // You can perform additional actions here, such as updating the UI, displaying a confirmation, etc.
-  alert('Product added to the cart!');
+  alert("Product added to the cart!");
 }
 
 // Attach the addToCart function to all add to cart buttons with the class 'add_to_cart_btn'
-var addToCartButtons = document.querySelectorAll('.add_to_cart_btn');
+var addToCartButtons = document.querySelectorAll(".add_to_cart_btn");
 addToCartButtons.forEach(function (button) {
-  button.addEventListener('click', function () {
+  button.addEventListener("click", function () {
     addToCart(this);
   });
 });
 
-
-
-// ADD TO CART 
+// ADD TO CART
 function toggleDropdown(button) {
   var dropdownContent = button.nextElementSibling;
   dropdownContent.classList.toggle("active");
@@ -243,8 +252,6 @@ function closeDropdown(timesSpan) {
   var dropdownContent = timesSpan.parentElement;
   dropdownContent.classList.remove("active");
 }
-
-
 
 //sign in
 function validatePassword(password) {
@@ -283,7 +290,8 @@ function validateLogin() {
   // Validate password
   if (!validatePassword(passwordInput.value)) {
     console.log("Invalid password");
-    errorMessages.textContent = "Şifrə 6 simvol böyük və kiçik hərflərdən və rəqəmdən ibarət olmalıdır!";
+    errorMessages.textContent =
+      "Şifrə 6 simvol böyük və kiçik hərflərdən və rəqəmdən ibarət olmalıdır!";
     errorMessages.style.border = "1px solid rgb(208, 46, 46)";
     errorMessages.style.backgroundColor = "#fff6f6";
     return;
@@ -336,10 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
       isValid = false;
     }
 
-    if (
-      !emailInput.value.trim() ||
-      !isValidEmail(emailInput.value.trim())
-    ) {
+    if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
       showError("Invalid email format...");
       isValid = false;
     }
@@ -370,11 +375,9 @@ document.addEventListener("DOMContentLoaded", function () {
   passwordInput.addEventListener("input", function () {
     var passwordResult = zxcvbn(passwordInput.value);
     passwordStrength.textContent =
-      "Password strength: " +
-      getPasswordStrengthLabel(passwordResult.score);
+      "Password strength: " + getPasswordStrengthLabel(passwordResult.score);
     passwordStrength.className =
-      "password-strength " +
-      getPasswordStrengthClass(passwordResult.score);
+      "password-strength " + getPasswordStrengthClass(passwordResult.score);
   });
 
   function getPasswordStrengthLabel(score) {
@@ -412,7 +415,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-
 //reset
 function validateForm() {
   document.getElementById("errorMessages").innerHTML = "";
@@ -435,58 +437,194 @@ function validateEmail(email) {
   return emailRegex.test(email);
 }
 
-
-$(document).ready(function() {
-  $('.with-submenu').click(function() {
-    $(this).find('.blog_sidebar_submenu').slideToggle();
-    $(this).toggleClass('active');
+$(document).ready(function () {
+  $(".with-submenu").click(function () {
+    $(this).find(".blog_sidebar_submenu").slideToggle();
+    $(this).toggleClass("active");
 
     // Update the arrow direction
     $(this)
-      .find('.svg-arrow')
-      .toggleClass('rotate-down', $(this).hasClass('active'));
-    
+      .find(".svg-arrow")
+      .toggleClass("rotate-down", $(this).hasClass("active"));
+
     $(this)
-      .siblings('.with-submenu')
-      .removeClass('active')
-      .find('.blog_sidebar_submenu')
+      .siblings(".with-submenu")
+      .removeClass("active")
+      .find(".blog_sidebar_submenu")
       .slideUp();
-    
+
     // Reset the arrow direction for other items
     $(this)
-      .siblings('.with-submenu')
-      .find('.svg-arrow')
-      .removeClass('rotate-down');
+      .siblings(".with-submenu")
+      .find(".svg-arrow")
+      .removeClass("rotate-down");
   });
 });
 
 
- 
-// To access the stars
-let stars = 
-    document.getElementsByClassName("star");
-let output = 
-    document.getElementById("output");
- 
-// Funtion to update rating
-function gfg(n) {
-    remove();
-    for (let i = 0; i < n; i++) {
-        if (n == 1) cls = "one";
-        else if (n == 2) cls = "two";
-        else if (n == 3) cls = "three";
-        else if (n == 4) cls = "four";
-        else if (n == 5) cls = "five";
-        stars[i].className = "star " + cls;
-    }
-    output.innerText = "Rating is: " + n + "/5";
+
+
+
+//IMAGE UPLOAD
+const imageInput = document.getElementById("fileInput");
+const imageContainer = document.getElementById("image-container");
+const uploadedImages = [];
+
+function mergeFiles() {
+  const fileInput1 = document.getElementById("imageInput");
+  const fileInput2 = document.getElementById("imageInput2");
+
+  if (fileInput2.files.length !== 0) {
+    const mergedFiles = Array.from(fileInput1.files).concat(
+      Array.from(fileInput2.files)
+    );
+
+    const mergedFileInput = document.createElement("input");
+    mergedFileInput.type = "file";
+    mergedFileInput.setAttribute("id", "imageInput");
+    mergedFileInput.setAttribute("name", "images");
+    mergedFileInput.setAttribute("accept", "image/*");
+
+    const newFileList = new DataTransfer();
+    mergedFiles.forEach((file) => newFileList.items.add(file));
+
+    mergedFileInput.files = newFileList.files;
+    fileInput2.files = mergedFileInput.files;
+
+    fileInput1.parentNode.replaceChild(mergedFileInput, fileInput1);
+  } else {
+    console.log("erkim");
+    fileInput2.files = fileInput1.files;
+    console.log(fileInput2.files);
+  }
 }
- 
-// To remove the pre-applied styling
-function remove() {
-    let i = 0;
-    while (i < 5) {
-        stars[i].className = "star";
-        i++;
+
+if (imageInput) {
+  imageInput.addEventListener("change", handleFileSelect);
+
+  function handleFileSelect(event) {
+    const files = event.target.files;
+
+    for (const file of files) {
+      if (file.type.startsWith("image/")) {
+        displayImage(file);
+        uploadedImages.push(file);
+        console.log(imageInput.files);
+        console.log(uploadedImages);
+      }
     }
+
+    const mergedFileInput = document.createElement("input");
+    const mergedFiles = Array.from(uploadedImages);
+    mergedFileInput.type = "file";
+    mergedFileInput.multiple = true;
+    mergedFileInput.setAttribute("id", "imageInput");
+    mergedFileInput.setAttribute("name", "images");
+    mergedFileInput.setAttribute("accept", "image/*");
+
+    const newFileList = new DataTransfer();
+    mergedFiles.forEach((file) => newFileList.items.add(file));
+    mergedFileInput.files = newFileList.files;
+    imageInput.files = mergedFileInput.files;
+    console.log("imageInput.files");
+    console.log(imageInput.files);
+  }
+}
+
+function displayImage(file) {
+  const reader = new FileReader();
+
+  reader.onload = function (e) {
+    const imageWrapper = document.createElement("div");
+    imageWrapper.classList.add("image-wrapper");
+
+    const img = document.createElement("img");
+    img.src = e.target.result;
+    img.style.width = "100px";
+    img.style.height = "100px";
+
+    const actionButtons = document.createElement("div");
+    actionButtons.classList.add("action-buttons");
+
+    const deleteBtn = document.createElement("button");
+    deleteBtn.classList.add("delete-btn");
+    deleteBtn.innerText = "❌";
+    deleteBtn.style.color = "white";
+    deleteBtn.addEventListener("click", () => deleteImage(imageWrapper, file));
+
+    actionButtons.appendChild(deleteBtn);
+    imageWrapper.appendChild(img);
+    imageWrapper.appendChild(actionButtons);
+    imageContainer.appendChild(imageWrapper);
+    document.getElementsByName("mainImage")[0].checked = true;
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function deleteImage(imageWrapper, file) {
+  imageContainer.removeChild(imageWrapper);
+
+  const index = uploadedImages.indexOf(file);
+  if (index !== -1) {
+    uploadedImages.splice(index, 1);
+    console.log(uploadedImages);
+    updateImageInputFiles();
+  }
+}
+
+function updateImageInputFiles() {
+  const newFileList = new DataTransfer();
+  uploadedImages.forEach((file) => newFileList.items.add(file));
+  imageInput.files = newFileList.files;
+
+  console.log("Updated imageInput.files:");
+  console.log(imageInput.files);
+}
+
+const smsCodeInput = document.getElementById("sms-code");
+
+function checkAndShowModal() {
+  var phoneValue = $("#phone").val().trim();
+  console.log(phoneValue);
+
+  if (phoneValue !== "") {
+    $("#yourModalId").show();
+    countdown.style.display = "none";
+
+    var timeElement = document.getElementById("countdownFirst");
+
+    if (timeElement) {
+      var timeArray = timeElement.innerText.split(":");
+      var minutes = parseInt(timeArray[0]);
+      var seconds = parseInt(timeArray[1]);
+
+      var countdownInterval = setInterval(function () {
+        if (minutes === 0 && seconds === 0) {
+          clearInterval(countdownInterval);
+        } else {
+          seconds = seconds === 0 ? 59 : seconds - 1;
+          minutes = seconds === 59 ? minutes - 1 : minutes;
+
+          var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
+          var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
+          timeElement.innerText = formattedMinutes + ":" + formattedSeconds;
+        }
+      }, 1000);
+    }
+  } else {
+    console.log(
+      "Phone number is empty. Show an error message or take appropriate action."
+    );
+  }
+}
+
+function closeModal() {
+  $("#yourModalId").hide();
+  if (smsCodeInput) {
+    smsCodeInput.value = "";
+    smsCodeInput.focus();
+  } else {
+    console.error("Input field with ID 'sms-code' not found");
+  }
 }

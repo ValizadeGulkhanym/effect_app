@@ -47,8 +47,6 @@
     />
   </head>
   <body>
-  
-
     <div class="reviews_page">
       <div class="reviews_active_part">
         <div class="stars_and_dropdown_wrapper">
@@ -62,51 +60,51 @@
             <ul class="blog_sidebar_submenu">
               <li>
                 <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star four">★ </span>
+                  <span class="star five">★ </span>
                 </div>
                 <div id="output">Rating is: 0/5</div>
               </li>
               <li>
                 <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star four">★ </span>
+                  <span class="star">★ </span>
                 </div>
                 <div id="output">Rating is: 0/5</div>
               </li>
               <li>
                 <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
                 </div>
                 <div id="output">Rating is: 0/5</div>
               </li>
               <li>
                 <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
                 </div>
                 <div id="output">Rating is: 0/5</div>
               </li>
               <li>
                 <div class="stars_wrapper">
-                  <span onclick="gfg(1)" class="star">★ </span>
-                  <span onclick="gfg(2)" class="star">★ </span>
-                  <span onclick="gfg(3)" class="star">★ </span>
-                  <span onclick="gfg(4)" class="star">★ </span>
-                  <span onclick="gfg(5)" class="star">★ </span>
+                  <span class="star one">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
                 </div>
                 <div id="output">Rating is: 0/5</div>
               </li>
@@ -119,7 +117,7 @@
             <div class="ui simple dropdown item">
               <i class="fa-solid fa-sliders"></i>
 
-              <div class="menu " id="sortBy_menu">
+              <div class="menu" id="sortBy_menu">
                 <div class="item">Sort by</div>
                 <div class="item">Featured</div>
                 <div class="item">Newest</div>
@@ -128,7 +126,7 @@
               </div>
             </div>
           </div>
-        </div> 
+        </div>
       </div>
 
       <!-- Button trigger modal -->
@@ -160,54 +158,96 @@
               ></button>
             </div>
             <div class="modal-body review_modal_body">
-  
-              <div class="reviews_h1_wrapper">
-                <h1>How would you rate this item ?</h1>
-              </div>
               <form class="review_modal_form" type="submit" action="">
-             
-                  <div class="stars_wrapper">
-                    <span onclick="gfg(1)" class="star">★ </span>
-                    <span onclick="gfg(2)" class="star">★ </span>
-                    <span onclick="gfg(3)" class="star">★ </span>
-                    <span onclick="gfg(4)" class="star">★ </span>
-                    <span onclick="gfg(5)" class="star">★ </span>
+                <div class="inputs_inline">
+                  <div class="label_and_input_wrapper">
+                    <label for="">full name</label>
+                    <input type="name" />
                   </div>
+                  <div class="label_and_input_wrapper">
+                    <label for="">Email</label>
+                    <input type="email" />
+                  </div>
+                </div>
+                <div class="reviews_h1_wrapper">
+                  <h1>How would you rate this item ?</h1>
+                </div>
+                <div class="stars_wrapper">
+                  <span onclick="gfg(1)"
+                  class="star">★
+            </span>
+            <span onclick="gfg(2)"
+                  class="star">★
+            </span>
+            <span onclick="gfg(3)"
+                  class="star">★
+            </span>
+            <span onclick="gfg(4)"
+                  class="star">★
+            </span>
+            <span onclick="gfg(5)"
+                  class="star">★
+            </span>
+ </div>
 
-                  <label for="fileInput" class="custom-file-upload" onclick="document.getElementById('fileInput').click()">
-                    <i class="fa-regular fa-image"></i> Add photos
+                <label for="fileInput" class="custom-file-upload">
+                  <i class="fa-regular fa-image"></i> Add photos
                 </label>
-                <input type="file" id="fileInput" class="add_fotos" style="display:none;">
-                
-              <div class="reviews_h1_wrapper">
-                <h1>tell us more</h1>
-              </div>
-              <textarea
-                id="leave_review" 
-                placeholder="Share your experience"
-                name="text"
-                cols="30"
-                rows="10"
-              ></textarea>
-
-                <div class="label_and_input_wrapper">
-                  <label for="">full name</label>
-                  <input type="name" />
+                <input
+                  type="file"
+                  id="fileInput"
+                  class="add_fotos"
+                  style="display: none"
+                />
+                <div id="image-container"></div>
+                <div class="reviews_h1_wrapper">
+                  <h1>tell us more !</h1>
                 </div>
-                <div class="label_and_input_wrapper">
-                  <label for="">Email</label>
-                  <input type="email" />
-                </div>
+                <textarea
+                  id="leave_review"
+                  placeholder="Share your experience"
+                  name="text"
+                  cols="50"
+                  rows="5"
+                ></textarea>
               </form>
             </div>
-            <div class="modal-footer">
-            
-            </div>
+            <div class="modal-footer"></div>
           </div>
         </div>
       </div>
     </div>
+<script>
+// To access the stars
+let stars = 
+    document.getElementsByClassName("star");
+let output = 
+    document.getElementById("output");
+ 
+// Funtion to update rating
+function gfg(n) {
+    remove();
+    for (let i = 0; i < n; i++) {
+        if (n == 1) cls = "one";
+        else if (n == 2) cls = "two";
+        else if (n == 3) cls = "three";
+        else if (n == 4) cls = "four";
+        else if (n == 5) cls = "five";
+        stars[i].className = "star " + cls;
+    }
+    output.innerText = "Rating is: " + n + "/5";
+}
+ 
+// To remove the pre-applied styling
+function remove() {
+    let i = 0;
+    while (i < 5) {
+        stars[i].className = "star";
+        i++;
+    }
+}
 
+</script>
     <script src="javascript/jquery-3.3.1.min.js"></script>
     <script src="javascript/bootstrap.min.js"></script>
     <script src="javascript/jquery.sticky.js"></script>
