@@ -4,59 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
-   <!--font awesome-->
-   <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
- />
-  <!--Swiper Slider-->
-  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
+  <title>Product detail</title>
 
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,700" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet" />
-
   <!-- Bootstrap CSS  -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+  <!--Swiper Slider-->
+  <link rel="stylesheet" href="css/swiper-bundle.min.css" />
 
   <!-- Slick Slider CSS -->
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="css/slick.css" />
 
+  <!-- Lightbox -->
+  <link rel="stylesheet" type="text/css" href="./fl-lightbox/css/flash-lightbox.css" />
+  <link rel="stylesheet" type="text/css" href="./fl-lightbox/font_awesome/css/font-awesome.min.css" />
+  <script type="text/javascript" src="./fl-lightbox/js/flash-lightbox.js" defer=""></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" rel="stylesheet" />
 </head>
 
-
-
 <body>
-  <!-- Modal Search Starts-->
-  <div id="id01" class="w3-modal effect_page_main_input">
-    <div class="w3-modal-content">
-      <div class="w3-container">
-        <span onclick="document.getElementById('id01').style.display='none'"
-          class="w3-button w3-display-topright">&times;</span>
-        <form action="" method="">
-          <input type="text" placeholder="Effekt axtar..." />
-          <button type="submit">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-              stroke="currentColor" class="w-6 h-6">
-              <path stroke-linecap="round" stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-            </svg>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-  <!-- Modal Search Ends -->
-
-  <!-- Modal basket-->
+  <!-- MODAL BASKET STARTS-->
   <div class="modal basket_modal" id="exampleModalLong" tabindex="-1" role="dialog"
     aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-    <div class="modal-dialog " role="document">
+    <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header1">
           <h5 class="modal-title" id="exampleModalLongTitle">Cart</h5>
@@ -65,8 +42,9 @@
           </button>
         </div>
         <div class="basket-modal-body scrollbar">
-          <div class="basket_modal_card ">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+          <div class="basket_modal_card">
+            <a href="productdetail.html">
+              <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" /></a>
             <div class="basket_card_desc">
               <div class="basket_card_title">
                 <a href="">NO FILTER LIGHTROOM PRESETS</a>
@@ -79,7 +57,9 @@
             </div>
           </div>
           <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <a href="productdetail.html">
+              <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            </a>
             <div class="basket_card_desc">
               <div class="basket_card_title">
                 <a href="">NO FILTER LIGHTROOM PRESETS</a>
@@ -92,7 +72,9 @@
             </div>
           </div>
           <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <a href="productdetail.html">
+              <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            </a>
             <div class="basket_card_desc">
               <div class="basket_card_title">
                 <a href="">NO FILTER LIGHTROOM PRESETS</a>
@@ -105,7 +87,9 @@
             </div>
           </div>
           <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <a href="productdetail.html">
+              <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            </a>
             <div class="basket_card_desc">
               <div class="basket_card_title">
                 <a href="">NO FILTER LIGHTROOM PRESETS</a>
@@ -118,7 +102,9 @@
             </div>
           </div>
           <div class="basket_modal_card">
-            <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            <a href="productdetail.html">
+              <img src="https://123presets.store/cdn/shop/products/NoFilter_180x.jpg?v=1650370999" alt="" />
+            </a>
             <div class="basket_card_desc">
               <div class="basket_card_title">
                 <a href="">NO FILTER LIGHTROOM PRESETS</a>
@@ -141,47 +127,30 @@
       </div>
     </div>
   </div>
-  <!--modal end-->
+  <!-- MODAL BASKET ENDS-->
 
-  <!-- Modal Search-->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
+  <!-- MODAL SEARCH STARTS-->
+  <div id="id01" class="w3-modal effect_page_main_input">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'"
+          class="w3-button w3-display-topright">&times;</span>
+        <form action="" method="">
+          <input type="text" placeholder="Effekt axtar..." />
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
           </button>
-        </div>
-        <div class="modal-body">
-          <div class="effect_page_main_input">
-            <input class="" type="text" placeholder="Effekt axtar..." />
-            <div class="search_svg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-              </svg>
-            </div>
-            <div class="exit_svg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">
-            Close
-          </button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        </form>
       </div>
     </div>
   </div>
-  <!-- Modal Search -->
+  <!-- MODAL SEARCH ENDS-->
+
+
 
 
   <!-- HEADER STARTS -->
@@ -193,6 +162,7 @@
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
+
   <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
     <div class="container">
       <div class="row align-items-center position-relative navbar-effect-header">
@@ -205,14 +175,15 @@
         </div>
 
         <div class="col-lg-8 header-middle">
-          <nav class="site-navigation text-center ml-auto " role="navigation">
-
+          <nav class="site-navigation text-center ml-auto" role="navigation">
             <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
               <li class="has-children">
                 <a href="#" class="nav-link"> LIGHTROOM PRESETS </a>
                 <i class="fa fa-chevron-down"></i>
                 <ul class="dropdown arrow-top">
-                  <li><a href="" class="nav-link">BEST-SELLING PRESENTS</a></li>
+                  <li>
+                    <a href="" class="nav-link">BEST-SELLING PRESENTS</a>
+                  </li>
                   <li><a href="" class="nav-link">HOLIDAY COLLECTION</a></li>
                   <li><a href="" class="nav-link">NEW RELEASES</a></li>
 
@@ -245,13 +216,12 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="#services-section" class="nav-link">
-                  Video luts </a></li>
-
+              <li>
+                <a href="#services-section" class="nav-link"> Video luts </a>
+              </li>
 
               <li class="has-children">
-                <a href="" class="nav-link">
-                  123CASE </a>
+                <a href="" class="nav-link"> 123CASE </a>
                 <i class="fa fa-chevron-down"></i>
                 <ul class="dropdown arrow-top">
                   <li><a href="" class="nav-link">Team</a></li>
@@ -273,12 +243,11 @@
               <li><a href="" class="nav-link">Brand</a></li>
             </ul>
           </nav>
-
         </div>
         <div class="col-lg-2 header-right">
           <div class="effect_header_right">
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                class="site-menu-toggle js-menu-toggle text-black"><span class="fa fa-bars h3"></span></a>
+            <div class="toggle-button d-inline-block d-lg-none">
+              <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span class="fa fa-bars h3"></span></a>
             </div>
 
             <div class="effect_header_icon">
@@ -291,15 +260,14 @@
               </a>
             </div>
             <div class="effect_header_icon">
-              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button">
+              <button onclick="document.getElementById('id01').style.display='block'" class="w3-button search-button">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round"
-                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                    d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"></path>
                 </svg>
               </button>
             </div>
-
             <div class="effect_header_icon">
               <button type="button" class="btn fav_btn position-relative">
                 <a href="./wishlist.html">
@@ -308,11 +276,10 @@
                     <path stroke-linecap="round" stroke-linejoin="round"
                       d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z">
                     </path>
-                  </svg>
-                  <span class="position-absolute text-light translate-middle p-2 border border-light rounded-circle">5
-                  </span>
-                </a>
+                  </svg></a>
 
+                <span class="position-absolute text-light translate-middle p-2 border border-light rounded-circle">5
+                </span>
               </button>
             </div>
             <div class="effect_header_icon">
@@ -325,114 +292,179 @@
                     d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z">
                   </path>
                 </svg>
+
                 <span class="position-absolute translate-middle text-light border rounded-circle">3
                 </span>
               </button>
-              <br>
+              <br />
             </div>
           </div>
         </div>
       </div>
     </div>
-
   </header>
   <!-- HEADER ENDS -->
 
   <div class="productdetail_wrapper_part1">
-
     <div class="product_detail_slider">
       <div class="slider__flex">
         <div class="slider__col">
-
           <div class="slider__prev"><i class="fa fa-chevron-up"></i></div>
 
           <div class="slider__thumbs">
             <div class="swiper-container">
-              <div class="swiper-wrapper ">
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details1.webp" alt="" /></div>
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details2.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details1.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details3.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details2.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details4.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details3.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details5.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details4.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details6.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details5.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details7.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details6.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details2.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details7.webp" alt="" />
+                  </div>
                 </div>
-                <div class="swiper-slide ">
-                  <div class="slider__image"><img src="./images/details7.webp" alt="" /></div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/influencer.webp" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/Adventure_720x (1).webp" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details6.webp" alt="" />
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="slider__image">
+                    <img src="./images/details7.webp" alt="" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
           <div class="slider__next"><i class="fa fa-chevron-down"></i></div>
-
         </div>
 
         <div class="slider__images">
           <div class="swiper-container">
             <div class="swiper-wrapper fl-lightbox lightboxes" nav>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details1.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details2.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details1.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details3.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details2.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details4.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details3.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details5.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details4.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details6.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details5.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details7.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details6.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details2.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details7.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
               <div class="swiper-slide">
-                <div class="slider__image fl-lightbox-item"><img src="./images/details7.webp" class="fl-lightbox-img"
-                    alt="" /></div>
+                <div class="slider__image fl-lightbox-item">
+                  <img class="fl-lightbox-img" src="./images/influencer.webp" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider__image fl-lightbox-item">
+                  <img class="fl-lightbox-img" src="./images/Adventure_720x (1).webp" alt="" />
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details6.webp" class="fl-lightbox-img" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="slider__image fl-lightbox-item">
+                  <img src="./images/details7.webp" class="fl-lightbox-img" alt="" />
+                </div>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
     <div class="productdetail_wrapper_part1_right">
       <div class="productdetail_wrapper_part1_right_h2">
         EARTH TONES LIGHTROOM PRESETS
       </div>
+
+      <a class="rating-area" href="#scroll-review-area">
+        <div class="star-card">
+          <span class="star one">★</span>
+          <span class="star two">★</span>
+          <span class="star three">★</span>
+          <span class="star four">★</span>
+          <span class="star five">★</span>
+        </div>
+        <div class="rating-number">(44)</div>
+      </a>
+
       <div class="productdetail_wrapper_part1_right_h4">
         1. select a package
       </div>
@@ -483,7 +515,7 @@
         2. order and download
       </div>
       <button class="productdetail_addToBasketBtn">Add to cart</button>
-      
+
       <div class="toWishlist e-fav" onclick="toggleFavorite(this)">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
           class="w-6 h-6">
@@ -534,7 +566,7 @@
         </p>
 
         <p>
-          <b>Why 123presets?<br /></b><b>✓<span>&nbsp;</span></b><span>24/7 Quick Customer
+          <b>WhyOur Effect Site?<br /></b><b>✓<span>&nbsp;</span></b><span>24/7 Quick Customer
             Support<br /></span><b>✓<span>&nbsp;</span></b><span>Instant Download after
             purchase<br /></span><b>✓<span>&nbsp;</span></b><span>15 000+ Trustworthy customer reviews</span>
         </p>
@@ -554,14 +586,7 @@
             style="color: #a9191a" data-mce-style="color: #a9191a;"><strong>&nbsp;<span mce-data-marked="1">EARTH
                 TONES</span></strong></span><span>&nbsp;presets collection.</span>
         </p>
-        <div style="text-align: center" data-mce-style="text-align: center;">
-          <a href="https://123presets.store/products/influencer-must-have-pack-30-packs"
-            data-mce-href="https://123presets.store/products/influencer-must-have-pack-30-packs" class="rte__image"><img
-              style="float: none" alt=""
-              src="https://cdn.shopify.com/s/files/1/0054/3955/3610/files/123presets-2_bf805158-5b34-4a64-8e12-ac874903d0df.jpg?v=1676310101"
-              data-mce-style="float: none;"
-              data-mce-src="https://cdn.shopify.com/s/files/1/0054/3955/3610/files/123presets-2_bf805158-5b34-4a64-8e12-ac874903d0df.jpg?v=1676310101" /></a>
-        </div>
+
         <div class="productdetail_video_luts_link_box">
           <div class="productdetail_video_luts_h4">Video LUTS:</div>
           <span style="color: #a9191a" data-mce-fragment="1" data-mce-style="color: #a9191a;"><a style="color: #a9191a"
@@ -614,7 +639,7 @@
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-              why 123presets?
+              whyOur Effect Site?
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
@@ -687,28 +712,151 @@
     </div>
   </div>
 
-
   <div class="top_selling_products_head">Related Products</div>
 
   <div class="selling_products_slider">
     <div class="slider_inner">
       <div class="productdetail_card">
-        <img
-          src="https://123presets.store/cdn/shop/products/Hiking-1_0f0be8af-dd8f-4dde-9147-bd6709bb5e5f_720x.jpg?v=1671392204"
-          alt="" />
+        <a href="productdetail.html">
+          <img
+            src="https://123presets.store/cdn/shop/products/Hiking-1_0f0be8af-dd8f-4dde-9147-bd6709bb5e5f_720x.jpg?v=1671392204"
+            alt="" />
+        </a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
+        <div class="effectcard_desc">
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
+          <div class="product_price_box">
+            <div class="product_price_current">$15.00</div>
+            <div class="product_price_compare">$40.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="productdetail_card">
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880" alt="" />
+        </a>
+        <div class="dropup add_to_cart_btn">
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
+          <div class="dropup-content">
+            <span onclick="closeDropdown(this)">&times;</span>
+            <li class="select-package">seleck a package</li>
+            <li data-variant-id="39708335734856">desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
+          </div>
+        </div>
+        <div class="effectcard_desc">
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
+          <div class="product_price_box">
+            <div class="product_price_current">$15.00</div>
+            <div class="product_price_compare">$40.00</div>
+          </div>
+        </div>
+      </div>
+      <div class="productdetail_card">
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/products/SummerBreeze_360x.jpg?v=1650373671" alt="" />
+        </a>
+        <div class="dropup add_to_cart_btn">
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
+          <div class="dropup-content">
+            <span onclick="closeDropdown(this)">&times;</span>
+            <li class="select-package">seleck a package</li>
+            <li data-variant-id="39708335734856">desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
+          </div>
+        </div>
+        <div class="effectcard_desc">
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
+          <div class="product_price_box">
+            <div class="product_price_current">$15.00</div>
+            <div class="product_price_compare">$40.00</div>
+          </div>
+        </div>
+      </div>
 
+      <div class="productdetail_card">
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/products/Deluxe_360x.jpg?v=1662484135" alt="" />
+        </a>
+        <div class="dropup add_to_cart_btn">
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
+          <div class="dropup-content">
+            <span onclick="closeDropdown(this)">&times;</span>
+            <li class="select-package">seleck a package</li>
+            <li data-variant-id="39708335734856">desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
+          </div>
+        </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -716,80 +864,34 @@
         </div>
       </div>
       <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/products/Clean_360x.jpg?v=1650351880" alt="" />
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/products/Minimal_360x.jpg?v=1650368861" alt="" /></a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
-          <div class="product_price_box">
-            <div class="product_price_current">$15.00</div>
-            <div class="product_price_compare">$40.00</div>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
           </div>
-        </div>
-      </div>
-      <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/products/SummerBreeze_360x.jpg?v=1650373671" alt="" />
-        <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
-          <div class="dropup-content">
-            <span onclick="closeDropdown(this)">&times;</span>
-            <li class="select-package">seleck a package</li>
-            <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
-          </div>
-        </div>
-        <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
-          <div class="product_price_box">
-            <div class="product_price_current">$15.00</div>
-            <div class="product_price_compare">$40.00</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/products/Deluxe_360x.jpg?v=1662484135" alt="" />
-        <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
-          <div class="dropup-content">
-            <span onclick="closeDropdown(this)">&times;</span>
-            <li class="select-package">seleck a package</li>
-            <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
-          </div>
-        </div>
-        <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
-          <div class="product_price_box">
-            <div class="product_price_current">$15.00</div>
-            <div class="product_price_compare">$40.00</div>
-          </div>
-        </div>
-      </div>
-      <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/products/Minimal_360x.jpg?v=1650368861" alt="" />
-        <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
-          <div class="dropup-content">
-            <span onclick="closeDropdown(this)">&times;</span>
-            <li class="select-package">seleck a package</li>
-            <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
-          </div>
-        </div>
-        <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -799,26 +901,678 @@
     </div>
   </div>
 
-  <div class="top_selling_products_head">top selling products</div>
+  <!-- REVİEW STARTS -->
 
+  <!-- SINGLE VERIFIED REVIEW MODAL STARTS -->
+  <div class="modal fade review-modal" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <!-- Modal content for review 1 -->
+        <div class="modal-content" id="modalContent1">
+          <div class="modal-header">
+            <h5 class="modal-title" id="reviewModalLabel1">
+              Review by Turkan Ganbarova
+            </h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true" class="modal-close" onclick="closeReviewModal('reviewModal')">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="modal-review-area">
+              <div class="review-left">
+                <img src="images/review2.jpg" alt="" />
+              </div>
+              <div class="review-right">
+                <div class="rating-desc">
+                  <div class="rating-name">
+                    <span> Turkan Ganbarova</span>
+                    <span class="verified"><i class="fa fa-check"></i> Verified</span>
+                  </div>
+                  <div class="rating-area">
+                    <div class="star-card">
+                      <span class="star one">★</span>
+                      <span class="star two">★</span>
+                      <span class="star three">★</span>
+                      <span class="star four">★</span>
+                      <span class="star five">★</span>
+                    </div>
+                  </div>
+                  <div class="rating-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Possimus, impedit! Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Sed sint itaque possimus ratione
+                    consequuntur, pariatur ullam ipsam, autem, ad expedita
+                    minima esse? Recusandae quos, vitae ullam pariatur magnam
+                    impedit rem modi amet. Quasi in asperiores neque id. Sit
+                    quas ut ea est fugiat repellendus reiciendis eos at,
+                    culpa, magnam vel! Lorem, ipsum dolor sit amet consectetur
+                    adipisicing elit. Iure doloremque non praesentium?
+                    Molestias, laborum? Aliquid alias commodi aspernatur rem
+                    nulla totam at consectetur pariatur. Consequatur in
+                    commodi quaerat, iste blanditiis quibusdam vero alias
+                    assumenda doloremque veritatis maiores pariatur nihil
+                    eligendi quos laborum? Aspernatur et sint quidem quis
+                    earum nostrum voluptatem.
+                  </div>
+                  <a href="productdetail.html">
+                    <div class="rated-effect">
+                      <img src="images/details1.webp" alt="" />
+                      <div class="rated-effect-name">
+                        BRIGHT & AIRY LIGHTROOM PRESETS
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="review-backdrop"></div>
+  <!-- SINGLE VERIFIED REVIEW MODAL ENDS -->
+
+  <div class="review-page" id="scroll-review-area">
+    <div class="reviews_first_part">
+      <div class="reviews_active_part">
+        <div class="stars_and_dropdown_wrapper">
+          <div class="stars_fullfilled star">★★★★★</div>
+          <li class="blog_sidebar_menu_item with-submenu">
+            <div class="a_and_svg_wrapper">
+              <div class="blog_a_wrapper">
+                <div>306 Reviews <i class="fa fa-angle-down"></i></div>
+              </div>
+            </div>
+            <ul class="blog_sidebar_submenu">
+              <li>
+                <div class="stars_wrapper">
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star four">★ </span>
+                  <span class="star five">★ </span>
+                </div>
+                <div id="stars_result">(201)</div>
+              </li>
+              <li>
+                <div class="stars_wrapper">
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star four">★ </span>
+                  <span class="star">★ </span>
+                </div>
+                <div id="stars_result">(201)</div>
+              </li>
+              <li>
+                <div class="stars_wrapper">
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star three">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                </div>
+                <div id="stars_result">(201)</div>
+              </li>
+              <li>
+                <div class="stars_wrapper">
+                  <span class="star one">★ </span>
+                  <span class="star two">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                </div>
+                <div id="stars_result">(201)</div>
+              </li>
+              <li>
+                <div class="stars_wrapper">
+                  <span class="star one">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                  <span class="star">★ </span>
+                </div>
+                <div id="stars_result">(201)</div>
+              </li>
+            </ul>
+          </li>
+        </div>
+        <div class="write_a_review_btn_and_sortby_btn_wrapper">
+          <button type="button" class="btn btn-primary write_review_btn write_review_btn_desktop" data-bs-toggle="modal"
+            data-bs-target="#exampleModal">
+            Write a review
+          </button>
+
+          <div class="sortBy_btn">
+            <div class="ui compact menu">
+              <div class="ui simple dropdown item">
+                <i class="fa fa-sliders"></i>
+
+                <div class="menu" id="sortBy_menu">
+                  <div class="item">Sort by</div>
+                  <div class="item">Featured</div>
+                  <div class="item">Newest</div>
+                  <div class="item">Highest Reviews</div>
+                  <div class="item">Lowest Reviews</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary write_review_btn write_review_btn_mobile" data-bs-toggle="modal"
+        data-bs-target="#exampleModal">
+        Write a review
+      </button>
+
+      <!-- ADD RATING Modal STARTS-->
+      <div class="add-review-modal">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="btn_close_wrapper">
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+              </div>
+
+              <div class="modal-body review_modal_body">
+                <form class="review_modal_form" type="submit" action="" onsubmit="return validateSignup()">
+                  <div class="inputs_inline">
+                    <div class="label_and_input_wrapper">
+                      <label for="email">full name</label>
+                      <input type="name" id="fullName" name="fullName" />
+                      <!-- <div id="errorMessages"></div> -->
+                    </div>
+                    <div class="label_and_input_wrapper">
+                      <label for="">Email</label>
+                      <input type="email" id="email" name="email" required />
+                      <!-- <div id="errorMessages"></div> -->
+                    </div>
+                  </div>
+                  <div class="reviews_h1_wrapper">
+                    <h1>How would you rate this item ?</h1>
+                  </div>
+
+                  <div class="stars_wrapper add_your_star">
+                    <input type="radio" name="starRating" value="1" />
+                    <span onclick="gfg(1)" class="star">★ </span>
+
+                    <span onclick="gfg(2)" class="star">★ </span>
+
+                    <span onclick="gfg(3)" class="star">★ </span>
+
+                    <span onclick="gfg(4)" class="star">★ </span>
+
+                    <span onclick="gfg(5)" class="star">★ </span>
+                  </div>
+
+                  <label for="fileInput" class="custom-file-upload">
+                    <i class="fa fa-image"></i> Add photos
+                  </label>
+                  <input type="file" id="fileInput" class="add_fotos" style="display: none" accept="image/*" />
+                  <div id="image-container"></div>
+                  <div class="reviews_h1_wrapper">
+                    <h1>tell us more !</h1>
+                  </div>
+                  <textarea id="leave_review" placeholder="Share your experience" name="text">   </textarea>
+                  <button class="done_btn" type="submit">Done</button>
+                </form>
+              </div>
+              <div class="modal-footer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ADD RATING Modal ENDS -->
+
+    </div>
+
+    <div class="review-area">
+      <div class="single-review" onclick="showReviewModal('reviewModal')">
+        <img src="images/review.jpg" alt="" />
+
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review" onclick="showReviewModal('reviewModal')">
+        <img src="images/review2.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review" onclick="showReviewModal('reviewModal')">
+        <img src="images/review3.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">Just like!</div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review" onclick="showReviewModal()">
+        <img src="images/details2.webp" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Maiores, labore.
+            </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit! Lorem ipsum dolor sit amet.
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review" onclick="showReviewModal()">
+        <img src="images/review2.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review" onclick="showReviewModal()">
+        <img src="images/review3.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star">★</span>
+            </div>
+          </div>
+          <div class="rating-text">Just like!</div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review3.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">Just like!</div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/details2.webp" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Maiores, labore.
+            </p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit! Lorem ipsum dolor sit amet.
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review2.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review3.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+          </div>
+          <div class="rating-text">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            Possimus, impedit!
+          </div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="single-review">
+        <img src="images/review.jpg" alt="" />
+        <div class="rating-desc">
+          <div class="rating-name">
+            <span> Turkan Ganbarova</span>
+            <span class="verified"><i class="fa fa-check"></i> Verified</span>
+          </div>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star">★</span>
+            </div>
+          </div>
+          <div class="rating-text">Just like!</div>
+          <div class="rated-effect">
+            <img src="images/details1.webp" alt="" />
+            <div class="rated-effect-name">
+              BRIGHT & AIRY LIGHTROOM PRESETS
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="productlist_pagination">
+      <li class="paginationleft"><a href=""> &lt; </a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li class="active"><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li class="paginationright"><a href="">&gt;</a></li>
+    </ul>
+  </div>
+
+  <!-- REVİEW ENDS -->
+
+  <div class="top_selling_products_head">top selling products</div>
   <div class="selling_products_slider">
     <div class="slider_inner">
       <div class="productdetail_card">
-        <img
-          src="https://123presets.store/cdn/shop/products/resizedproductimages-1_ef8e234f-056e-4815-bf3d-fcae29fb7590_360x.jpg?v=1639046602"
-          alt="" />
+        <a href="productdetail.html">
+          <img
+            src="https://123presets.store/cdn/shop/products/resizedproductimages-1_ef8e234f-056e-4815-bf3d-fcae29fb7590_360x.jpg?v=1639046602"
+            alt="" /></a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -826,19 +1580,35 @@
         </div>
       </div>
       <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/products/ChristmasLights_360x.jpg?v=1650351742" alt="" />
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/products/ChristmasLights_360x.jpg?v=1650351742" alt="" />
+        </a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -846,21 +1616,37 @@
         </div>
       </div>
       <div class="productdetail_card">
-        <img
-          src="https://123presets.store/cdn/shop/products/resizedproductimages-1_aa08d82f-dc33-4a34-945c-23fe15090822_360x.jpg?v=1639048238"
-          alt="" />
+        <a href="productdetail.html">
+          <img
+            src="https://123presets.store/cdn/shop/products/resizedproductimages-1_aa08d82f-dc33-4a34-945c-23fe15090822_360x.jpg?v=1639048238"
+            alt="" />
+        </a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -869,21 +1655,37 @@
       </div>
 
       <div class="productdetail_card">
-        <img
-          src="https://123presets.store/cdn/shop/products/CozyHoliday_df391c47-3f7e-4a73-888c-f3baff24688f_360x.jpg?v=1650363589"
-          alt="" />
+        <a href="productdetail.html">
+          <img
+            src="https://123presets.store/cdn/shop/products/CozyHoliday_df391c47-3f7e-4a73-888c-f3baff24688f_360x.jpg?v=1650363589"
+            alt="" />
+        </a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -891,19 +1693,35 @@
         </div>
       </div>
       <div class="productdetail_card">
-        <img src="https://123presets.store/cdn/shop/files/1-FestiveLightsThumbnails_360x.jpg?v=1701426705" alt="" />
+        <a href="productdetail.html">
+          <img src="https://123presets.store/cdn/shop/files/1-FestiveLightsThumbnails_360x.jpg?v=1701426705" alt="" />
+        </a>
         <div class="dropup add_to_cart_btn">
-          <button class="dropbtn" onclick="toggleDropdown(this)">add to cart</button>
+          <button class="dropbtn" onclick="toggleDropdown(this)">
+            <img src="images/basket.svg" alt="" /> add to cart
+          </button>
           <div class="dropup-content">
             <span onclick="closeDropdown(this)">&times;</span>
             <li class="select-package">seleck a package</li>
             <li data-variant-id="39708335734856">desktop</li>
-            <li data-variant-id="39708335734854"> mobile</li>
-            <li data-variant-id="39708335734852"> mobile + desktop</li>
+            <li data-variant-id="39708335734854">mobile</li>
+            <li data-variant-id="39708335734852">mobile + desktop</li>
           </div>
         </div>
         <div class="effectcard_desc">
-          <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+          <h4>
+            <a href="productdetails.html">BRIGHT & AIRY LIGHTROOM PRESETS</a>
+          </h4>
+          <div class="rating-area">
+            <div class="star-card">
+              <span class="star one">★</span>
+              <span class="star two">★</span>
+              <span class="star three">★</span>
+              <span class="star four">★</span>
+              <span class="star five">★</span>
+            </div>
+            <div class="rating-number">(44)</div>
+          </div>
           <div class="product_price_box">
             <div class="product_price_current">$15.00</div>
             <div class="product_price_compare">$40.00</div>
@@ -913,7 +1731,7 @@
     </div>
   </div>
 
-  <div class="special_offer_cards_wrapper">
+  <div class="special_offer_cards_wrapper" id="review-area">
     <div class="special_offer_card">
       <img
         src="https://123presets.store/cdn/shop/files/123presets-2_bca6f320-c2e8-4eeb-88bd-342edfe89186_720x.jpg?v=1624255584"
@@ -944,10 +1762,11 @@
       <div class="special_offer_card_p">
         Buy 3, Get 9 Free: Add to cart 12 items & pay for 3 only!
       </div>
-      <button class="special_offer_card_btn">read all reviews</button>
+      <button class="special_offer_card_btn">read all</button>
     </div>
   </div>
 
+  <!-- FOOTER STARTS -->
   <footer>
     <div class="footermobile">
       <div class="footerlogo">
@@ -1047,103 +1866,21 @@
 
         <form action="">
           <input type="text" placeholder="Enter your email" />
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="{1.5}"
-            stroke="currentColor" className="w-6 h-6">
-            <path strokeLinecap="round" strokeLinejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-          </svg>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="{1.5}"
+              stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </button>
         </form>
       </div>
 
-      <div class="footerpayload">
-        <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24"
-          aria-labelledby="pi-american_express">
-          <title id="pi-american_express">American Express</title>
-          <g fill="none">
-            <path fill="#000"
-              d="M35,0 L3,0 C1.3,0 0,1.3 0,3 L0,21 C0,22.7 1.4,24 3,24 L35,24 C36.7,24 38,22.7 38,21 L38,3 C38,1.3 36.6,0 35,0 Z"
-              opacity=".07"></path>
-            <path fill="#006FCF"
-              d="M35,1 C36.1,1 37,1.9 37,3 L37,21 C37,22.1 36.1,23 35,23 L3,23 C1.9,23 1,22.1 1,21 L1,3 C1,1.9 1.9,1 3,1 L35,1">
-            </path>
-            <path fill="#FFF"
-              d="M8.971,10.268 L9.745,12.144 L8.203,12.144 L8.971,10.268 Z M25.046,10.346 L22.069,10.346 L22.069,11.173 L24.998,11.173 L24.998,12.412 L22.075,12.412 L22.075,13.334 L25.052,13.334 L25.052,14.073 L27.129,11.828 L25.052,9.488 L25.046,10.346 L25.046,10.346 Z M10.983,8.006 L14.978,8.006 L15.865,9.941 L16.687,8 L27.057,8 L28.135,9.19 L29.25,8 L34.013,8 L30.494,11.852 L33.977,15.68 L29.143,15.68 L28.065,14.49 L26.94,15.68 L10.03,15.68 L9.536,14.49 L8.406,14.49 L7.911,15.68 L4,15.68 L7.286,8 L10.716,8 L10.983,8.006 Z M19.646,9.084 L17.407,9.084 L15.907,12.62 L14.282,9.084 L12.06,9.084 L12.06,13.894 L10,9.084 L8.007,9.084 L5.625,14.596 L7.18,14.596 L7.674,13.406 L10.27,13.406 L10.764,14.596 L13.484,14.596 L13.484,10.661 L15.235,14.602 L16.425,14.602 L18.165,10.673 L18.165,14.603 L19.623,14.603 L19.647,9.083 L19.646,9.084 Z M28.986,11.852 L31.517,9.084 L29.695,9.084 L28.094,10.81 L26.546,9.084 L20.652,9.084 L20.652,14.602 L26.462,14.602 L28.076,12.864 L29.624,14.602 L31.499,14.602 L28.987,11.852 L28.986,11.852 Z">
-            </path>
-          </g>
-        </svg>
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" role="img" x="0" y="0" width="38" height="24"
-          viewBox="0 0 165.521 105.965" xml:space="preserve" aria-labelledby="pi-apple_pay">
-          <title id="pi-apple_pay">Apple Pay</title>
-          <path fill="#000"
-            d="M150.698 0H14.823c-.566 0-1.133 0-1.698.003-.477.004-.953.009-1.43.022-1.039.028-2.087.09-3.113.274a10.51 10.51 0 0 0-2.958.975 9.932 9.932 0 0 0-4.35 4.35 10.463 10.463 0 0 0-.975 2.96C.113 9.611.052 10.658.024 11.696a70.22 70.22 0 0 0-.022 1.43C0 13.69 0 14.256 0 14.823v76.318c0 .567 0 1.132.002 1.699.003.476.009.953.022 1.43.028 1.036.09 2.084.275 3.11a10.46 10.46 0 0 0 .974 2.96 9.897 9.897 0 0 0 1.83 2.52 9.874 9.874 0 0 0 2.52 1.83c.947.483 1.917.79 2.96.977 1.025.183 2.073.245 3.112.273.477.011.953.017 1.43.02.565.004 1.132.004 1.698.004h135.875c.565 0 1.132 0 1.697-.004.476-.002.952-.009 1.431-.02 1.037-.028 2.085-.09 3.113-.273a10.478 10.478 0 0 0 2.958-.977 9.955 9.955 0 0 0 4.35-4.35c.483-.947.789-1.917.974-2.96.186-1.026.246-2.074.274-3.11.013-.477.02-.954.022-1.43.004-.567.004-1.132.004-1.699V14.824c0-.567 0-1.133-.004-1.699a63.067 63.067 0 0 0-.022-1.429c-.028-1.038-.088-2.085-.274-3.112a10.4 10.4 0 0 0-.974-2.96 9.94 9.94 0 0 0-4.35-4.35A10.52 10.52 0 0 0 156.939.3c-1.028-.185-2.076-.246-3.113-.274a71.417 71.417 0 0 0-1.431-.022C151.83 0 151.263 0 150.698 0z">
-          </path>
-          <path fill="#FFF"
-            d="M150.698 3.532l1.672.003c.452.003.905.008 1.36.02.793.022 1.719.065 2.583.22.75.135 1.38.34 1.984.648a6.392 6.392 0 0 1 2.804 2.807c.306.6.51 1.226.645 1.983.154.854.197 1.783.218 2.58.013.45.019.9.02 1.36.005.557.005 1.113.005 1.671v76.318c0 .558 0 1.114-.004 1.682-.002.45-.008.9-.02 1.35-.022.796-.065 1.725-.221 2.589a6.855 6.855 0 0 1-.645 1.975 6.397 6.397 0 0 1-2.808 2.807c-.6.306-1.228.511-1.971.645-.881.157-1.847.2-2.574.22-.457.01-.912.017-1.379.019-.555.004-1.113.004-1.669.004H14.801c-.55 0-1.1 0-1.66-.004a74.993 74.993 0 0 1-1.35-.018c-.744-.02-1.71-.064-2.584-.22a6.938 6.938 0 0 1-1.986-.65 6.337 6.337 0 0 1-1.622-1.18 6.355 6.355 0 0 1-1.178-1.623 6.935 6.935 0 0 1-.646-1.985c-.156-.863-.2-1.788-.22-2.578a66.088 66.088 0 0 1-.02-1.355l-.003-1.327V14.474l.002-1.325a66.7 66.7 0 0 1 .02-1.357c.022-.792.065-1.717.222-2.587a6.924 6.924 0 0 1 .646-1.981c.304-.598.7-1.144 1.18-1.623a6.386 6.386 0 0 1 1.624-1.18 6.96 6.96 0 0 1 1.98-.646c.865-.155 1.792-.198 2.586-.22.452-.012.905-.017 1.354-.02l1.677-.003h135.875">
-          </path>
-          <g>
-            <g>
-              <path fill="#000"
-                d="M43.508 35.77c1.404-1.755 2.356-4.112 2.105-6.52-2.054.102-4.56 1.355-6.012 3.112-1.303 1.504-2.456 3.959-2.156 6.266 2.306.2 4.61-1.152 6.063-2.858">
-              </path>
-              <path fill="#000"
-                d="M45.587 39.079c-3.35-.2-6.196 1.9-7.795 1.9-1.6 0-4.049-1.8-6.698-1.751-3.447.05-6.645 2-8.395 5.1-3.598 6.2-.95 15.4 2.55 20.45 1.699 2.5 3.747 5.25 6.445 5.151 2.55-.1 3.549-1.65 6.647-1.65 3.097 0 3.997 1.65 6.696 1.6 2.798-.05 4.548-2.5 6.247-5 1.95-2.85 2.747-5.6 2.797-5.75-.05-.05-5.396-2.101-5.446-8.251-.05-5.15 4.198-7.6 4.398-7.751-2.399-3.548-6.147-3.948-7.447-4.048">
-              </path>
-            </g>
-            <g>
-              <path fill="#000"
-                d="M78.973 32.11c7.278 0 12.347 5.017 12.347 12.321 0 7.33-5.173 12.373-12.529 12.373h-8.058V69.62h-5.822V32.11h14.062zm-8.24 19.807h6.68c5.07 0 7.954-2.729 7.954-7.46 0-4.73-2.885-7.434-7.928-7.434h-6.706v14.894z">
-              </path>
-              <path fill="#000"
-                d="M92.764 61.847c0-4.809 3.665-7.564 10.423-7.98l7.252-.442v-2.08c0-3.04-2.001-4.704-5.562-4.704-2.938 0-5.07 1.507-5.51 3.82h-5.252c.157-4.86 4.731-8.395 10.918-8.395 6.654 0 10.995 3.483 10.995 8.89v18.663h-5.38v-4.497h-.13c-1.534 2.937-4.914 4.782-8.579 4.782-5.406 0-9.175-3.222-9.175-8.057zm17.675-2.417v-2.106l-6.472.416c-3.64.234-5.536 1.585-5.536 3.95 0 2.288 1.975 3.77 5.068 3.77 3.95 0 6.94-2.522 6.94-6.03z">
-              </path>
-              <path fill="#000"
-                d="M120.975 79.652v-4.496c.364.051 1.247.103 1.715.103 2.573 0 4.029-1.09 4.913-3.899l.52-1.663-9.852-27.293h6.082l6.863 22.146h.13l6.862-22.146h5.927l-10.216 28.67c-2.34 6.577-5.017 8.735-10.683 8.735-.442 0-1.872-.052-2.261-.157z">
-              </path>
-            </g>
-          </g>
-        </svg>
-        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
-          aria-labelledby="pi-master">
-          <title id="pi-master">Mastercard</title>
-          <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-          </path>
-          <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
-          <circle fill="#EB001B" cx="15" cy="12" r="7"></circle>
-          <circle fill="#F79E1B" cx="23" cy="12" r="7"></circle>
-          <path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z">
-          </path>
-        </svg>
-        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img"
-          aria-labelledby="pi-paypal">
-          <title id="pi-paypal">PayPal</title>
-          <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-          </path>
-          <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
-          <path fill="#003087"
-            d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z">
-          </path>
-          <path fill="#3086C8"
-            d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z">
-          </path>
-          <path fill="#012169"
-            d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z">
-          </path>
-        </svg>
-        <svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24"
-          aria-labelledby="pi-visa">
-          <title id="pi-visa">Visa</title>
-          <path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z">
-          </path>
-          <path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path>
-          <path
-            d="M28.3 10.1H28c-.4 1-.7 1.5-1 3h1.9c-.3-1.5-.3-2.2-.6-3zm2.9 5.9h-1.7c-.1 0-.1 0-.2-.1l-.2-.9-.1-.2h-2.4c-.1 0-.2 0-.2.2l-.3.9c0 .1-.1.1-.1.1h-2.1l.2-.5L27 8.7c0-.5.3-.7.8-.7h1.5c.1 0 .2 0 .2.2l1.4 6.5c.1.4.2.7.2 1.1.1.1.1.1.1.2zm-13.4-.3l.4-1.8c.1 0 .2.1.2.1.7.3 1.4.5 2.1.4.2 0 .5-.1.7-.2.5-.2.5-.7.1-1.1-.2-.2-.5-.3-.8-.5-.4-.2-.8-.4-1.1-.7-1.2-1-.8-2.4-.1-3.1.6-.4.9-.8 1.7-.8 1.2 0 2.5 0 3.1.2h.1c-.1.6-.2 1.1-.4 1.7-.5-.2-1-.4-1.5-.4-.3 0-.6 0-.9.1-.2 0-.3.1-.4.2-.2.2-.2.5 0 .7l.5.4c.4.2.8.4 1.1.6.5.3 1 .8 1.1 1.4.2.9-.1 1.7-.9 2.3-.5.4-.7.6-1.4.6-1.4 0-2.5.1-3.4-.2-.1.2-.1.2-.2.1zm-3.5.3c.1-.7.1-.7.2-1 .5-2.2 1-4.5 1.4-6.7.1-.2.1-.3.3-.3H18c-.2 1.2-.4 2.1-.7 3.2-.3 1.5-.6 3-1 4.5 0 .2-.1.2-.3.2M5 8.2c0-.1.2-.2.3-.2h3.4c.5 0 .9.3 1 .8l.9 4.4c0 .1 0 .1.1.2 0-.1.1-.1.1-.1l2.1-5.1c-.1-.1 0-.2.1-.2h2.1c0 .1 0 .1-.1.2l-3.1 7.3c-.1.2-.1.3-.2.4-.1.1-.3 0-.5 0H9.7c-.1 0-.2 0-.2-.2L7.9 9.5c-.2-.2-.5-.5-.9-.6-.6-.3-1.7-.5-1.9-.5L5 8.2z"
-            fill="#142688"></path>
-        </svg>
-      </div>
+
 
       <div class="footerpoweredby">
-        <h5>© 2023 123PRESETS</h5>
-        <p>Powered by Shopify</p>
+        <h5>© 2023 OUR EFFECT SITE</h5>
+        <p>Powered by <a href="https://khanbutagroup.az/">Khan Buta Group</a></p>
       </div>
     </div>
 
@@ -1204,18 +1941,14 @@
         </ul>
       </div>
       <div class="thirdcol">
-        <div class="footerhead"><a href="">brand</a></div>
+        <div class="footerhead"><a href="">Other Links</a></div>
         <ul>
-          <li><a href="">contact</a></li>
-          <li><a href="">how to use</a></li>
-          <li><a href="">about us</a></li>
-          <li><a href="">presets quiz</a></li>
-          <li><a href="">reviews</a></li>
-          <li><a href="">affiliate program</a></li>
-          <li><a href="">file licences</a></li>
-          <li><a href="">refund policy</a></li>
-          <li><a href="">privacy policy</a></li>
-          <li><a href="">shipping information</a></li>
+          <li><a href="contact.html">contact</a></li>
+          <li><a href="aboutus.html">about us</a></li>
+          <li><a href="faq.html">F.A.Q</a></li>
+          <li><a href="howtouse.html">how to use</a></li>
+          <li><a href="review.html">reviews</a></li>
+          <li><a href="privacy.html">privacy policy</a></li>
         </ul>
       </div>
       <div class="signupandsave">
@@ -1227,21 +1960,80 @@
 
         <form action="">
           <input type="text" placeholder="Enter your email" />
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-            stroke="currentColor" class="w-6 h-6">
-            <path stroke-linecap="round" stroke-linejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-          </svg>
+          <button type="submit">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="{1.5}"
+              stroke="currentColor" className="w-6 h-6">
+              <path strokeLinecap="round" strokeLinejoin="round"
+                d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          </button>
         </form>
       </div>
 
       <div class="footerpoweredby">
-        <h5>© 2023 123PRESETS</h5>
-        <p>Powered by Shopify</p>
+        <h5>© 2023 OUR EFFECT SITE</h5>
+        <p>Powered by <a href="https://khanbutagroup.az/">Khan Buta Group</a></p>
       </div>
     </div>
   </footer>
+  <!-- FOOTER ENDS -->
 
+
+
+  <div class="sticky_footer_cart_wrapper">
+    <div class="sticky_footer_cart_desktop">
+      <div class="left_side_of_sticky">
+        <div class="sticky-details">
+          <img src="https://123presets.store/cdn/shop/products/EarthTones_75x75_crop_center.jpg?v=1650363854"
+            alt="img" />
+          <div class="sticky_cart_desktop_h4_price_wrapper">
+            <h4>BRIGHT & AIRY LIGHTROOM PRESETS</h4>
+
+            <div class="sticky_price_box">
+              <div class="product_price_current">$15.00</div>
+              <div class="product_price_compare">$40.00</div>
+            </div>
+
+            <div class="rating-area sticky-rating">
+              <div class="star-card">
+                <span class="star one">★</span>
+                <span class="star two">★</span>
+                <span class="star three">★</span>
+                <span class="star four">★</span>
+                <span class="star five">★</span>
+              </div>
+              <div class="rating-number">(44)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="sticky-add">
+        <!-- <select name="package" id="select_footer_cart">
+          <option style="border-radius: 0 !important" value="mobile">
+            mobile
+          </option>
+          <option value="mobdesk">mobile + desktop</option>
+          <option value="desktop">desktop</option>
+        </select> -->
+
+        <div class="custom-select">
+          <div class="styled-select">
+            <span name="mobiledesktop">Mobile + Desktop</span>
+          </div>
+          <div class="options-container">
+            <div name="mobile">Mobile</div>
+            <div name="mobiledesktop" class="active">Mobile + Desktop</div>
+            <div name="desktop">Desktop</div>
+          </div>
+        </div>
+        <div class="sticky_footer_cart_btn"><button class="">Add to cart</button></div>
+      </div>
+
+
+    </div>
+  </div>
 
   <script src="javascript/jquery-3.3.1.min.js"></script>
   <script src="javascript/bootstrap.min.js"></script>
@@ -1253,6 +2045,8 @@
 
   <script src="javascript/slick.min.js"></script>
   <script src="javascript/main.js"></script>
+
+  <!-- JavaScript function to show the modal -->
 
 
 
@@ -1270,6 +2064,9 @@
       });
     }
   </script>
+
+
+
 
 
 </body>

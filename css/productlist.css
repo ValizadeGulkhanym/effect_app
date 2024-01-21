@@ -1,18 +1,19 @@
-.productdetail_totalPrice_and_toCart_wrapper .total{
+.productdetail_totalPrice_and_toCart_wrapper .total {
   font-size: 16px;
-font-weight: 600;
-letter-spacing: 0.4px;
-line-height: 25.6px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  line-height: 25.6px;
 }
-.productdetail_totalPrice_and_toCart_wrapper .total span{
+.productdetail_totalPrice_and_toCart_wrapper .total span {
   font-size: 16px;
-font-weight: 300;
-letter-spacing: 0.4px;
-line-height: 25.6px;
+  font-weight: 300;
+  letter-spacing: 0.4px;
+  line-height: 25.6px;
 }
-.productdetail_wrapper_frequently_bought .addToCard{
+
+.productdetail_wrapper_frequently_bought .addToCard {
   font-size: 14px;
   font-weight: 700;
-letter-spacing: 1px;
-line-height: 19.88px;GVFT6
+  letter-spacing: 1px;
+  line-height: 19.88px;
 }

@@ -11,6 +11,7 @@ function toggleButton(clickedButton) {
   });
 }
 
+
 $(document).ready(function () {
   $(".slider_inner").slick({
     dots: false,
@@ -46,27 +47,44 @@ $(document).ready(function () {
       },
     ],
   });
+
+
+  // Function to reinitialize the slider on tab change
+  function refreshSlider() {
+    $('.slider_inner').slick('refresh');
+  }
+
+  // Event listener for tab change
+  $('.nav-pills-custom a').on('shown.bs.tab', function (e) {
+    refreshSlider();
+  });
 });
+
 
 // Инициализация превью слайдера
 const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
   // ищем слайдер превью по селектору
   // задаем параметры
   direction: "vertical", // вертикальная прокрутка
-  slidesPerView: 7, // показывать по 3 превью
+  slidesPerView: 6, // показывать по 3 превью
   spaceBetween: 24, // расстояние между слайдами
+  // autoHeight: true,
   navigation: {
     // задаем кнопки навигации
     nextEl: ".slider__next", // кнопка Next
     prevEl: ".slider__prev", // кнопка Prev
   },
-  freeMode: true, // при перетаскивании превью ведет себя как при скролле
+  loop: true, // Добавлено
+  centeredSlides: true, // Добавлено
+  freeMode: true,
+
   breakpoints: {
     // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
       direction: "horizontal", // горизонтальная прокрутка
       slidesPerView: 4,
+      spaceBetween: 20,
     },
 
     768: {
@@ -82,7 +100,7 @@ const sliderThumbs = new Swiper(".slider__thumbs .swiper-container", {
     1400: {
       // при 768px и выше
       direction: "vertical",
-      slidesPerView: 7, // вертикальная прокрутка
+      slidesPerView: 6, // вертикальная прокрутка
     },
   },
 });
@@ -94,6 +112,7 @@ const sliderImages = new Swiper(".slider__images .swiper-container", {
   slidesPerView: 1, // показывать по 1 изображению
   spaceBetween: 32, // расстояние между слайдами
   mousewheel: true, // можно прокручивать изображения колёсиком мыши
+  autoHeight: true,
   navigation: {
     // задаем кнопки навигации
     nextEl: ".slider__next", // кнопка Next
@@ -104,11 +123,14 @@ const sliderImages = new Swiper(".slider__images .swiper-container", {
     // указываем на превью слайдер
     swiper: sliderThumbs, // указываем имя превью слайдера
   },
+  loop: true,
+  centeredSlides: true,
   breakpoints: {
     // условия для разных размеров окна браузера
     0: {
       // при 0px и выше
       direction: "horizontal", // горизонтальная прокрутка
+
     },
     768: {
       // при 768px и выше
@@ -116,6 +138,7 @@ const sliderImages = new Swiper(".slider__images .swiper-container", {
     },
   },
 });
+
 // ADD TO FAVORITE
 function toggleFavorite(button) {
   // Toggle the 'favorite-active' class on the button
@@ -124,42 +147,44 @@ function toggleFavorite(button) {
 
 // Slick Slider
 
-$(document).ready(function () {
-  $(".slider_inner").slick({
-    dots: true,
-    infinite: true,
-    speed: 800,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 6,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
-});
+// $(document).ready(function () {
+//   $(".slider_inner").slick({
+//     dots: true,
+//     infinite: true,
+//     speed: 800,
+//     autoplay: true,
+//     autoplaySpeed: 2000,
+//     slidesToShow: 4,
+//     slidesToScroll: 4,
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 6,
+//           slidesToScroll: 3,
+//           infinite: true,
+//           dots: true,
+//         },
+//       },
+//       {
+//         breakpoint: 600,
+//         settings: {
+//           slidesToShow: 2,
+//           slidesToScroll: 2,
+//         },
+//       },
+//       {
+//         breakpoint: 480,
+//         settings: {
+//           slidesToShow: 1,
+//           slidesToScroll: 1,
+//         },
+//       },
+//     ],
+//   });
+// });
+
+
 //dropdown
 $(document).ready(function () {
   $(".dropdown-submenu a.test").on("click", function (e) {
@@ -168,90 +193,6 @@ $(document).ready(function () {
     e.preventDefault();
   });
 });
-
-// Function to handle card deletion
-function deleteCard(deleteButton) {
-  // Get the parent card element and remove it
-  var card = deleteButton.closest(".home_effectcard");
-
-  if (card) {
-    console.log("Deleting card with id:", card.id);
-
-    card.remove();
-    var storedCards = JSON.parse(localStorage.getItem("cards")) || [];
-
-    // Get the index of the deleted card
-    var index = storedCards.findIndex(function (storedCard) {
-      return storedCard.id === card.id; // Assuming each card has a unique identifier (id)
-    });
-
-    // Remove the deleted card
-    if (index !== -1) {
-      storedCards.splice(index, 1);
-
-      // Update the local
-      localStorage.setItem("cards", JSON.stringify(storedCards));
-      console.log("Updated storedCards:", storedCards);
-    }
-  }
-}
-
-// Attach the deleteCard function to all delete buttons with the class 'delete_btn'
-var deleteButtons = document.querySelectorAll(".delete_btn");
-deleteButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    deleteCard(this);
-  });
-});
-
-//add to cart function
-function addToCart(productButton) {
-  // Assuming you have some product data associated with the card
-  var productCard = productButton.closest(".home_effectcard");
-  var productName = productCard.querySelector(
-    ".effectcarddescription p"
-  ).textContent;
-  var productPrice = productCard.querySelector(
-    ".wk-product-price--current"
-  ).textContent;
-
-  // Create an object representing the product
-  var product = {
-    name: productName,
-    price: productPrice,
-    // Add other product details if needed
-  };
-
-  // Assume there is a global cart array to store added products
-  // Initialize it if not already created
-  if (!window.cart) {
-    window.cart = [];
-  }
-
-  // Add the product to the cart array
-  window.cart.push(product);
-
-  // You can perform additional actions here, such as updating the UI, displaying a confirmation, etc.
-  alert("Product added to the cart!");
-}
-
-// Attach the addToCart function to all add to cart buttons with the class 'add_to_cart_btn'
-var addToCartButtons = document.querySelectorAll(".add_to_cart_btn");
-addToCartButtons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    addToCart(this);
-  });
-});
-
-// ADD TO CART
-function toggleDropdown(button) {
-  var dropdownContent = button.nextElementSibling;
-  dropdownContent.classList.toggle("active");
-}
-function closeDropdown(timesSpan) {
-  var dropdownContent = timesSpan.parentElement;
-  dropdownContent.classList.remove("active");
-}
 
 //sign in
 function validatePassword(password) {
@@ -290,8 +231,7 @@ function validateLogin() {
   // Validate password
   if (!validatePassword(passwordInput.value)) {
     console.log("Invalid password");
-    errorMessages.textContent =
-      "Şifrə 6 simvol böyük və kiçik hərflərdən və rəqəmdən ibarət olmalıdır!";
+    errorMessages.textContent = "Şifrə 6 simvol böyük və kiçik hərflərdən və rəqəmdən ibarət olmalıdır!";
     errorMessages.style.border = "1px solid rgb(208, 46, 46)";
     errorMessages.style.backgroundColor = "#fff6f6";
     return;
@@ -303,169 +243,184 @@ function validateLogin() {
   // Add additional logic here, such as submitting the form or redirecting the user.
 }
 
-//sign up
 
-document.addEventListener("DOMContentLoaded", function () {
-  var form = document.querySelector("#signup_form");
-  var errorMessages = document.querySelector("#error-message");
-  var passwordStrength = document.querySelector("#password-strength");
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
-    var validationPassed = validateSignupForm();
+// Function to handle card deletion
+function deleteCard(deleteButton) {
+  // Get the parent card element and remove it
+  var card = deleteButton.closest('.home_effectcard');
 
-    if (validationPassed) {
-      // If all validations pass, you can submit the form or perform further actions
-      // For this example, we'll display a success message
-      errorMessages.textContent = "Account created successfully!";
-      errorMessages.style.color = "#2ecc71";
+  if (card) {
+    console.log('Deleting card with id:', card.id);
+
+    card.remove();
+    var storedCards = JSON.parse(localStorage.getItem('cards')) || [];
+
+    // Get the index of the deleted card 
+    var index = storedCards.findIndex(function (storedCard) {
+      return storedCard.id === card.id; // Assuming each card has a unique identifier (id)
+    });
+
+    // Remove the deleted card 
+    if (index !== -1) {
+      storedCards.splice(index, 1);
+
+      // Update the local
+      localStorage.setItem('cards', JSON.stringify(storedCards));
+      console.log('Updated storedCards:', storedCards);
     }
+  }
+}
+
+// Attach the deleteCard function to all delete buttons with the class 'delete_btn'
+var deleteButtons = document.querySelectorAll('.delete_btn');
+deleteButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    deleteCard(this);
   });
-
-  function validateSignupForm() {
-    var firstNameInput = document.getElementById("firstName");
-    var lastNameInput = document.getElementById("lastName");
-    var emailInput = document.getElementById("email");
-    var passwordInput = document.getElementById("password");
-
-    // Reset error message and password strength
-    errorMessages.textContent = "";
-    passwordStrength.textContent = "";
-
-    var isValid = true;
-
-    if (!firstNameInput.value.trim()) {
-      showError("First name cannot be empty...");
-      isValid = false;
-    }
-
-    if (!lastNameInput.value.trim()) {
-      showError("Last name cannot be empty...");
-      isValid = false;
-    }
-
-    if (!emailInput.value.trim() || !isValidEmail(emailInput.value.trim())) {
-      showError("Invalid email format...");
-      isValid = false;
-    }
-
-    var passwordResult = zxcvbn(passwordInput.value);
-    if (passwordResult.score < 3) {
-      showError(
-        "Password is not strong enough. Please choose a stronger password."
-      );
-      isValid = false;
-    }
-
-    return isValid;
-  }
-
-  function showError(message) {
-    errorMessages.textContent = message;
-    errorMessages.style.border = "1px solid rgb(208, 46, 46)";
-    errorMessages.style.backgroundColor = "#fff6f6";
-    errorMessages.style.color = "rgb(208, 46, 46)";
-  }
-
-  function isValidEmail(email) {
-    var emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
-    return email.match(emailPattern);
-  }
-
-  passwordInput.addEventListener("input", function () {
-    var passwordResult = zxcvbn(passwordInput.value);
-    passwordStrength.textContent =
-      "Password strength: " + getPasswordStrengthLabel(passwordResult.score);
-    passwordStrength.className =
-      "password-strength " + getPasswordStrengthClass(passwordResult.score);
-  });
-
-  function getPasswordStrengthLabel(score) {
-    switch (score) {
-      case 0:
-        return "Very Weak";
-      case 1:
-        return "Weak";
-      case 2:
-        return "Fair";
-      case 3:
-        return "Good";
-      case 4:
-        return "Strong";
-      default:
-        return "";
-    }
-  }
-
-  function getPasswordStrengthClass(score) {
-    switch (score) {
-      case 0:
-        return "weak";
-      case 1:
-        return "weak";
-      case 2:
-        return "fair";
-      case 3:
-        return "good";
-      case 4:
-        return "strong";
-      default:
-        return "";
-    }
-  }
 });
 
-//reset
-function validateForm() {
-  document.getElementById("errorMessages").innerHTML = "";
-  var email = document.getElementById("email").value;
-  if (!validateEmail(email)) {
-    var errorMessage = document.getElementById("errorMessages");
-    errorMessage.textContent = "Please enter a valid email address.";
-    errorMessage.style.border = "1px solid rgb(169, 25, 26)";
-    errorMessage.style.color = "rgb(169, 25, 26)";
-    errorMessage.style.backgroundColor = "#fff6f6";
 
-    return;
+
+
+//add to cart function
+function addToCart(productButton) {
+  // Assuming you have some product data associated with the card
+  var productCard = productButton.closest('.home_effectcard');
+  var productName = productCard.querySelector('.effectcarddescription p').textContent;
+  var productPrice = productCard.querySelector('.wk-product-price--current').textContent;
+
+  // Create an object representing the product
+  var product = {
+    name: productName,
+    price: productPrice
+    // Add other product details if needed
+  };
+
+  // Assume there is a global cart array to store added products
+  // Initialize it if not already created
+  if (!window.cart) {
+    window.cart = [];
   }
-  alert("Password reset email sent to " + email);
-  document.getElementById("login_form").reset();
+
+  // Add the product to the cart array
+  window.cart.push(product);
+
+  // You can perform additional actions here, such as updating the UI, displaying a confirmation, etc.
+  alert('Product added to the cart!');
 }
 
-function validateEmail(email) {
-  var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+// Attach the addToCart function to all add to cart buttons with the class 'add_to_cart_btn'
+var addToCartButtons = document.querySelectorAll('.add_to_cart_btn');
+addToCartButtons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    addToCart(this);
+  });
+});
+
+
+// ADD TO CART 
+function toggleDropdown(button) {
+  var dropdownContent = button.nextElementSibling;
+  dropdownContent.classList.toggle("active");
 }
+function closeDropdown(timesSpan) {
+  var dropdownContent = timesSpan.parentElement;
+  dropdownContent.classList.remove("active");
+}
+
+
+// RATING STARS
+
+// // To access the stars
+// let stars = document.getElementsByClassName("star");
+// let output = document.getElementById("output");
+
+// // Funtion to update rating
+// function gfg(n) {
+//   remove();
+//   for (let i = 0; i < n; i++) {
+//     if (n == 1) cls = "one";
+//     else if (n == 2) cls = "two";
+//     else if (n == 3) cls = "three";
+//     else if (n == 4) cls = "four";
+//     else if (n == 5) cls = "five";
+//     stars[i].className = "star " + cls;
+//   }
+//   output.innerText = "Rating is: " + n + "/5";
+// }
+
+// // To remove the pre-applied styling
+// function remove() {
+//   let i = 0;
+//   while (i < 5) {
+//     stars[i].className = "star";
+//     i++;
+//   }
+// }
+
+
+
 
 $(document).ready(function () {
-  $(".with-submenu").click(function () {
-    $(this).find(".blog_sidebar_submenu").slideToggle();
-    $(this).toggleClass("active");
+  $('.with-submenu').click(function () {
+    $(this).find('.blog_sidebar_submenu').slideToggle();
+    $(this).toggleClass('active');
 
     // Update the arrow direction
     $(this)
-      .find(".svg-arrow")
-      .toggleClass("rotate-down", $(this).hasClass("active"));
+      .find('.svg-arrow')
+      .toggleClass('rotate-down', $(this).hasClass('active'));
 
     $(this)
-      .siblings(".with-submenu")
-      .removeClass("active")
-      .find(".blog_sidebar_submenu")
+      .siblings('.with-submenu')
+      .removeClass('active')
+      .find('.blog_sidebar_submenu')
       .slideUp();
 
     // Reset the arrow direction for other items
     $(this)
-      .siblings(".with-submenu")
-      .find(".svg-arrow")
-      .removeClass("rotate-down");
+      .siblings('.with-submenu')
+      .find('.svg-arrow')
+      .removeClass('rotate-down');
   });
 });
 
 
 
 
+// SHOW RATED REVIEW MODAL
 
-//IMAGE UPLOAD
+function showReviewModal(reviewModal) {
+
+  // var stickyWrapper = $(".sticky_footer_cart_wrapper");
+  // stickyWrapper.fadeOut(); // or use .hide() to hide instantly
+
+  $(`#${reviewModal}`).removeClass("review-modal-show");
+  $(`#${reviewModal}`).removeClass("fade");
+  $("body").removeClass("modal-open");
+  // Show the modal
+  $(`#${reviewModal}`).addClass("review-modal-show");
+  $(`#${reviewModal}`).addClass("fade");
+  $(".review-backdrop").addClass("show");
+  // modal-backdrop      .modal-backdrop.show
+}
+function closeReviewModal(reviewModal) {
+  $(`#${reviewModal}`).removeClass("review-modal-show");
+  $(`#${reviewModal}`).removeClass("fade");
+  $("body").removeClass("modal-open");
+  $(".review-backdrop").removeClass("show");
+}
+
+
+// END RATED REVIEW MODAL
+
+
+
+
+
+//IMAGE UPLOAD STARTS
+
 const imageInput = document.getElementById("fileInput");
 const imageContainer = document.getElementById("image-container");
 const uploadedImages = [];
@@ -540,8 +495,8 @@ function displayImage(file) {
 
     const img = document.createElement("img");
     img.src = e.target.result;
-    img.style.width = "100px";
-    img.style.height = "100px";
+    img.style.width = "80px";
+    img.style.height = "80px";
 
     const actionButtons = document.createElement("div");
     actionButtons.classList.add("action-buttons");
@@ -582,49 +537,154 @@ function updateImageInputFiles() {
   console.log(imageInput.files);
 }
 
-const smsCodeInput = document.getElementById("sms-code");
+// IMAGE UPLOAD ENDS
 
-function checkAndShowModal() {
-  var phoneValue = $("#phone").val().trim();
-  console.log(phoneValue);
 
-  if (phoneValue !== "") {
-    $("#yourModalId").show();
-    countdown.style.display = "none";
 
-    var timeElement = document.getElementById("countdownFirst");
 
-    if (timeElement) {
-      var timeArray = timeElement.innerText.split(":");
-      var minutes = parseInt(timeArray[0]);
-      var seconds = parseInt(timeArray[1]);
 
-      var countdownInterval = setInterval(function () {
-        if (minutes === 0 && seconds === 0) {
-          clearInterval(countdownInterval);
-        } else {
-          seconds = seconds === 0 ? 59 : seconds - 1;
-          minutes = seconds === 59 ? minutes - 1 : minutes;
 
-          var formattedMinutes = minutes < 10 ? "0" + minutes : minutes;
-          var formattedSeconds = seconds < 10 ? "0" + seconds : seconds;
-          timeElement.innerText = formattedMinutes + ":" + formattedSeconds;
-        }
-      }, 1000);
+
+// To access the stars and radio inputs
+let stars = document.querySelectorAll(".add_your_star .star");
+let radioInput = document.querySelector('input[name="starRating"]');
+
+// Function to update rating
+function gfg(n) {
+  remove();
+  for (let i = 0; i < n; i++) {
+    let cls = getStarClass(i, n);
+    if (stars[i]) {
+      stars[i].classList.add(cls);
     }
-  } else {
-    console.log(
-      "Phone number is empty. Show an error message or take appropriate action."
-    );
+  }
+
+  // Update the value of the associated radio input
+  radioInput.value = n;
+}
+
+// To remove the pre-applied styling
+function remove() {
+  stars.forEach((star) => {
+    star.className = "star";
+  });
+}
+
+// Helper function to get star class based on index and rating
+function getStarClass(index, rating) {
+  switch (rating) {
+    case 1:
+      return "one";
+    case 2:
+      return "two";
+    case 3:
+      return "three";
+    case 4:
+      return "four";
+    case 5:
+      return "five";
+    default:
+      return "";
   }
 }
 
-function closeModal() {
-  $("#yourModalId").hide();
-  if (smsCodeInput) {
-    smsCodeInput.value = "";
-    smsCodeInput.focus();
-  } else {
-    console.error("Input field with ID 'sms-code' not found");
-  }
+
+
+
+// STICKY DETAILS ADD TO CART STARTS
+$(document).ready(function () {
+  var stickyWrapper = $(".sticky_footer_cart_wrapper");
+  var showAfterScroll = 100; // Adjust this value to your desired scroll amount
+
+  // Initially hide the sticky wrapper
+  stickyWrapper.hide();
+
+  $(window).scroll(function () {
+    var scrolled = window.pageYOffset;
+
+    // if (scrolled > showAfterScroll && !$('.basket_modal').hasClass('show') && !$('.review-modal').hasClass('review-modal-show')) {
+    if (scrolled > showAfterScroll) {
+      //  alert('yes')
+      stickyWrapper.fadeIn(); // or use .show() for instant visibility
+    } else {
+      stickyWrapper.fadeOut(); // or use .hide() to hide instantly
+    }
+  });
+});
+
+
+// STICKY ADD TO CART
+$(document).ready(function () {
+
+
+
+  $(".sticky-add .styled-select").click(function () {
+
+    var container = $(this).next(".sticky-add .options-container");
+    var spaceAbove = $(window).scrollTop();
+    var spaceBelow = $(window).height() - ($(this).offset().top - $(window).scrollTop());
+
+    if (spaceBelow > spaceAbove) {
+      container.css({ top: "100%", bottom: "auto" });
+    } else {
+      container.css({ top: "auto", bottom: "100%" });
+    }
+
+    container.slideToggle();
+  });
+
+  $(".sticky-add .options-container div").click(function () {
+    $(".sticky-add .options-container div").removeClass("active");
+
+    var selectedValue = $(this).text();
+    var selectedName = $(this).attr('name')
+    $(this).addClass("active");
+    $(".styled-select span").text(selectedValue);
+    $(".styled-select span").attr('name', selectedName);
+    $(".options-container").slideUp();
+  });
+
+  $(window).scroll(function () {
+
+    $(".sticky-add .options-container").slideUp();
+  });
+});
+
+
+
+
+// SLIDER HIGHTS
+
+function setHeights() {
+  // Get all the image elements inside the slider__images
+  var images = document.querySelectorAll('.slider__images .swiper-slide img');
+
+  // Find the maximum height among all images
+  var maxHeight = 0;
+  images.forEach(function (image) {
+    var imageHeight = image.clientHeight;
+    if (imageHeight > maxHeight) {
+      maxHeight = imageHeight;
+    }
+  });
+
+  // Set the height of the slider__images to the maximum height
+  var sliderImages = document.querySelector('.slider__images');
+  sliderImages.style.height = maxHeight + 'px';
+
+  // Set the height of the slider__thumbs to slider__images height - 96px
+  var sliderThumbs = document.querySelector('.slider__thumbs');
+  sliderThumbs.style.height = (maxHeight - 96) + 'px';
 }
+
+// Event listener for DOMContentLoaded
+document.addEventListener("DOMContentLoaded", function () {
+  // Initial call to set heights
+  setHeights();
+});
+
+// Event listener for window resize
+window.addEventListener('resize', setHeights);
+
+// Event listener for images load
+window.addEventListener('load', setHeights);
